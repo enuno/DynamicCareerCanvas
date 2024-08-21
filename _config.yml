@@ -42,7 +42,7 @@ content:
       - title: Networking
         description: |
          - OSI Model
-         - Layer 2 Protocols: ARP, STP/RSTP, LLDP, LACP
+         - Layer 2 Protocols: ARP, (R)STP, LLDP, LACP, 802.1Q/VLAN tagging
          - IP Protocols: TCP, UDP, ICMP
          - Routing Protocols: BGP, OSPF, VRRP
          - Layer 3 Protcols: DNS, SSL, SSH, SNMP, VPN (IPsec, OpenVPN, Wireguard)
