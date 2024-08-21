@@ -165,10 +165,27 @@ content:
           - Managed pre-production environments and production deployments on AWS, supporting online educational courseware.
           - Developed CloudFormation scripts, Puppet modules, and Jenkins pipelines for automated software builds and deployments.
 
-# Footer settings
 footer_show_references: true
-footer_text: >
-  References available upon request. © 2024 Elvis Nuno. All Rights Reserved.
+references_title: References on request
 
 # Build settings
 remote_theme: sproogen/modern-resume-theme
+sass:
+  sass_dir: _sass
+  style: compressed
+
+plugins:
+ - jekyll-seo-tag
+
+exclude : [
+  "Gemfile",
+  "Gemfile.lock",
+  "node_modules",
+  "vendor/bundle/",
+  "vendor/cache/",
+  "vendor/gems/",
+  "vendor/ruby/",
+  "lib/",
+  "scripts/",
+  "docker-compose.yml",
+  ]
