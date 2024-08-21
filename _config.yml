@@ -43,68 +43,6 @@ about_content: |
     Whether it’s architecting resilient networks or mentoring the next generation of engineers, I approach every task with enthusiasm and a commitment to excellence.
 
 content:
-  - title: Experience
-    layout: list
-    content:
-      - layout: left
-        border: weak
-        title: Centric Internet Services
-        sub_title: Director of Network Operations
-        caption: January 2024 - August 2024
-        description: |
-         - Led the successful integration of two distinct ISP networks, ensuring seamless merging with minimal downtime.
-         - Identified and addressed vulnerabilities within legacy infrastructure, enhancing network reliability and performance.
-         - Developed and implemented future-proof solutions for core network infrastructure, advancing wireless ISP and decentralized DeWi technology.
-
-      - layout: left
-        border: weak
-        title: Pacific NW Rural Broadband Alliance
-        sub_title: President, Co-Founder, Head of Operations
-        caption: November 2019 - June 2024
-        description: |
-          - Led engineering and deployment of community-owned ISPs in underserved rural communities in Montana.
-          - Secured grants and community funds to deliver broadband-quality service to areas outside traditional ISP profit models.
-          - Collaborated with DePIN projects like Althea, Nym, and Helium to deploy distributed internet, IoT connectivity, and privacy infrastructure.
-
-      - layout: left
-        border: weak
-        title: SolluCIO
-        sub_title: Linux System Engineer
-        caption: July 2019 - November 2019
-        description: |
-          - Built a high-availability, cloud-based eCommerce platform, optimizing security and performance for a grocery store chain in Hawaii.
-
-      - layout: left
-        border: weak
-        title: REW Consulting Services
-        sub_title: Solutions Architect & Technical Consultant
-        caption: June 2018 - February 2019
-        description: |
-          - Provided consulting on DevOps best practices, Ansible automation, and Jenkins CI/CD pipelines for telecom providers.
-
-      - layout: left
-        border: weak
-        title: goMoxie
-        sub_title: Lead DevOps Engineer - Cloud Services
-        caption: June 2016 - December 2016
-        description: |
-          - Led a team to establish DevOps best practices and transitioned siloed teams to a unified model. Automated infrastructure on VMware and AWS.
-
-      - layout: left
-        border: weak
-        title: McGraw-Hill Education
-        sub_title: Senior DevOps Engineer
-        caption: June 2015 - March 2016
-        description: |
-          - Managed pre-production environments and production deployments on AWS, supporting online educational courseware.
-          - Developed CloudFormation scripts, Puppet modules, and Jenkins pipelines for automated software builds and deployments.
-
-  - title: Education
-    layout: list
-    content:
-    - title: University of Montana
-      sub_title: Bachelor of Philosophy
-
   - title: Skills
   - layout: list
     content:
@@ -170,7 +108,7 @@ content:
           NYM Mixnode package for OpenWRT-based routers.
         quote: >
           Developed software components for integrating the NYM mixnet privacy network into OpenWRT-based routers under a Nymtech grant-funded project.
-        link: https://www.linkedin.com/in/elvis-nuno-5635914/overlay/experience/1568807918/multiple-media-viewer/?profileId=ACoAAADMHtsB5W_fBcoqhV7zQhcCbOoHZ7WzTqA&treasuryMediaId=1724191619126
+        link: https://github.com/The-Pacific-NW-Rural-Broadband-Alliance/nymbox
       - layout: top-middle
         title: Bridging the Digital Divide
         description: |
@@ -181,6 +119,62 @@ content:
         description: |
           Featured on KPAX News for launching the Missoula Valley Internet Co-op network, providing broadband service to underserved areas in Missoula, MT.
         link: https://www.youtube.com/watch?v=FBwfHBQqZcs
+
+  - title: Experience
+    layout: list
+    content:
+      - layout: left
+        border: weak
+        title: Centric Internet Services
+        sub_title: Director of Network Operations
+        caption: January 2024 - August 2024
+        description: |
+         - Led the successful integration of two distinct ISP networks, ensuring seamless merging with minimal downtime.
+         - Identified and addressed vulnerabilities within legacy infrastructure, enhancing network reliability and performance.
+         - Developed and implemented future-proof solutions for core network infrastructure, advancing wireless ISP and decentralized DeWi technology.
+
+      - layout: left
+        border: weak
+        title: Pacific NW Rural Broadband Alliance
+        sub_title: President, Co-Founder, Head of Operations
+        caption: November 2019 - June 2024
+        description: |
+          - Led engineering and deployment of community-owned ISPs in underserved rural communities in Montana.
+          - Secured grants and community funds to deliver broadband-quality service to areas outside traditional ISP profit models.
+          - Collaborated with DePIN projects like Althea, Nym, and Helium to deploy distributed internet, IoT connectivity, and privacy infrastructure.
+
+      - layout: left
+        border: weak
+        title: SolluCIO
+        sub_title: Linux System Engineer
+        caption: July 2019 - November 2019
+        description: |
+          - Built a high-availability, cloud-based eCommerce platform, optimizing security and performance for a grocery store chain in Hawaii.
+
+      - layout: left
+        border: weak
+        title: REW Consulting Services
+        sub_title: Solutions Architect & Technical Consultant
+        caption: June 2018 - February 2019
+        description: |
+          - Provided consulting on DevOps best practices, Ansible automation, and Jenkins CI/CD pipelines for telecom providers.
+
+      - layout: left
+        border: weak
+        title: goMoxie
+        sub_title: Lead DevOps Engineer - Cloud Services
+        caption: June 2016 - December 2016
+        description: |
+          - Led a team to establish DevOps best practices and transitioned siloed teams to a unified model. Automated infrastructure on VMware and AWS.
+
+      - layout: left
+        border: weak
+        title: McGraw-Hill Education
+        sub_title: Senior DevOps Engineer
+        caption: June 2015 - March 2016
+        description: |
+          - Managed pre-production environments and production deployments on AWS, supporting online educational courseware.
+          - Developed CloudFormation scripts, Puppet modules, and Jenkins pipelines for automated software builds and deployments.
 
 references: Available upon request.
 
