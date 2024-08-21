@@ -89,19 +89,17 @@ content:
           Authored and freely published an online guide to assist rural communities in forming local ISPs and constructing community-owned internet infrastructure.
       - layout: top-middle
         title: NymBox
-        description: |
-          NYM Mixnode package for OpenWRT-based routers.
         quote: >
           Developed software components for integrating the NYM mixnet privacy network into OpenWRT-based routers under a Nymtech grant-funded project.
         link: https://github.com/The-Pacific-NW-Rural-Broadband-Alliance/nymbox
       - layout: top-middle
         title: Bridging the Digital Divide
-        description: |
+        quote: >
           Presented an overview of how the DePIN platform Althea could be applied to serve Mission Valley residents with a community-owned wireless ISP solution. Funded by a grant from the Mission Valley Community Development Partners.
         link: https://www.youtube.com/watch?v=D0J-QLv0ZHA
       - layout: top-middle
         title: Missoula Valley Internet Co-op Network Launch
-        description: |
+        quote: >
           Featured on KPAX News for launching the Missoula Valley Internet Co-op network, providing broadband service to underserved areas in Missoula, MT.
         link: https://www.youtube.com/watch?v=FBwfHBQqZcs
 
