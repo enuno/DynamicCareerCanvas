@@ -166,12 +166,9 @@ content:
           - Developed CloudFormation scripts, Puppet modules, and Jenkins pipelines for automated software builds and deployments.
 
 # Footer settings
-  - title:
-    content:
-      - layout: bottom-middle
-        border: weak
-        description: >
-         References available upon request. © 2024 Elvis Nuno. All Rights Reserved.
+footer_show_references: true
+footer_text: >
+  References available upon request. © 2024 Elvis Nuno. All Rights Reserved.
 
 # Build settings
 remote_theme: sproogen/modern-resume-theme
