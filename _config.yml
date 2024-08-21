@@ -42,7 +42,7 @@ content:
       - title: Networking
         description: |
          - OSI Model
-         - Layer 2 Protocols: ARP STP/RSTP, LLDP, LACP
+         - Layer 2 Protocols: ARP, STP/RSTP, LLDP, LACP
          - IP Protocols: TCP, UDP, ICMP
          - Routing Protocols: BGP, OSPF, VRRP
          - Layer 3 Protcols: DNS, SSL, SSH, SNMP, VPN (IPsec, OpenVPN, Wireguard)
@@ -52,14 +52,14 @@ content:
          - Linux/UNIX
          - Cloud Platforms (AWS, GCE, Azure, OpenStack)
          - Virtualization (KVM, Xen, VMware, Proxmox)
-         - Gontainerization (Docker, LXC)
+         - Containerization (Docker, LXC)
          - Configuration Management (Ansible, Puppet, Chef)
 
       - title: DevOps
         description: |
          - CI/CD Pipelines (Jenkins, Bamboo)
          - Infrastructure as Code (Terraform, CloudFormation)
-         - Containerization Orchestration (Kubernetes)
+         - Container Orchestration (Kubernetes)
 
       - title: Blockchain/Web3
         description: |
