@@ -23,10 +23,10 @@ orcid_username: 0009-0002-8601-0527
 # flickr_username:
 
 # Social Links
-#social_links:
-#  - title: Keybase
-#    url: https://keybase.io/elvisnuno
-#    icon: fas fa-key
+social_links:
+  - title: Keybase
+    url: https://keybase.io/elvisnuno
+    icon: fas fa-key
 
 
 # About Section
