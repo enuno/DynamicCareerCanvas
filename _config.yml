@@ -17,21 +17,18 @@ orcid_username: 0009-0002-8601-0527
 #    icon: fas fa-key
 
 
-
-# GitPage URL
-website: https://enuno.github.io/DynamicCareerCanvas
-
-# Dark mode settings
-darkmode: false
-
 # Sections
 about:
   profile_image: images/profile_image.jpg
-  content: >
+  content: |
     I’m a Senior Systems and Networking Engineer with 20 years of hands-on experience in building and optimizing ISP and telecom infrastructure.
+
     My passion lies in solving complex challenges in DevOps, cloud, and distributed systems engineering, always with a focus on innovation and reliability.
+
     I thrive in leading large-scale projects, guiding teams, and fostering a collaborative environment where cutting-edge solutions are brought to life.
+
     As a Blockchain, Web3, and DePIN evangelist, I’m dedicated to advancing these technologies to create a more connected, secure, and decentralized world.
+
     Whether it’s architecting resilient networks or mentoring the next generation of engineers, I approach every task with enthusiasm and a commitment to excellence.
 
 experience:
