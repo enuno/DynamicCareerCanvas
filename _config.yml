@@ -4,6 +4,8 @@ favicon: images/favicon.ico
 
 version: 2
 
+darkmode: true
+
 # Personal info
 name: Elvis Nuno
 title: Chief Technology Solutions Architect
@@ -164,9 +166,12 @@ content:
           - Developed CloudFormation scripts, Puppet modules, and Jenkins pipelines for automated software builds and deployments.
 
 # Footer settings
-footer_text: >
-  References available upon request.
-  © 2024 Elvis Nuno. All Rights Reserved.
+  - title:
+    content:
+      - layout: bottom-middle
+        border: weak
+        description: >
+         References available upon request. © 2024 Elvis Nuno. All Rights Reserved.
 
 # Build settings
 remote_theme: sproogen/modern-resume-theme
