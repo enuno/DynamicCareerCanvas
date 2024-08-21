@@ -1,28 +1,22 @@
 # Site settings
 repository: enuno/DynamicCareerCanvas
-title: Elvis Nuno - Chief Technology Solutions Architect
 name: Elvis Nuno
+title: Chief Technology Solutions Architect
 email: curler_bulldozer806@simplelogin.com
-description: >
-    Chief Technology Solutions Architect. Blockchain, Web3, and DePIN Evangelist.  
+favicon: images/favicon.ico
+
+twitter_username: NunoElvis
+github_username:  enuno
+linkedin_username: elvis-nuno-5635914
+orcid_username: 0009-0002-8601-0527
 
 # Social Links
-social_links:
-  - title: Twitter
-    url: https://twitter.com/NunoElvis
-    icon: fab fa-twitter
-  - title: GitHub
-    url: https://github.com/enuno
-    icon: fab fa-github
-  - title: LinkedIn
-    url: https://www.linkedin.com/in/elvis-nuno-5635914
-    icon: fab fa-linkedin-in
-  - title: ORCID
-    url: https://orcid.org/0009-0002-8601-0527
-    icon: fas fa-id-badge
-  - title: Keybase
-    url: https://keybase.io/elvisnuno
-    icon: fas fa-key
+#social_links:
+#  - title: Keybase
+#    url: https://keybase.io/elvisnuno
+#    icon: fas fa-key
+
+
 
 # GitPage URL
 website: https://enuno.github.io/DynamicCareerCanvas
