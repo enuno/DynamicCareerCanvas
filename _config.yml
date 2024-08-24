@@ -160,6 +160,53 @@ content:
           - Managed pre-production environments and production deployments on AWS, supporting online educational courseware.
           - Developed CloudFormation scripts, Puppet modules, and Jenkins pipelines for automated software builds and deployments.
 
+      - layout: left
+        boarder: weak
+        title: CDK Global
+        sub_title: Senior Linux Systems Automations Engineer
+        caption: October 2014 - June 2015
+        description: |
+          - Automated cloud provisioning and scaling with Puppet in a multi-datacenter environment; developed a distributed monitoring platform using Icinga.
+
+      - layout: left
+        boarder: weak
+        title: Clearwire
+        sub_title: DevOps Release Manager
+        caption: October 2011 - October 2013
+        description: |
+          - Led deployments for high-traffic e-commerce sites and managed pre-production environments, migrating to VMware virtual servers.
+
+      - title: Linux Systems Administrator
+        sub_title: January 2010 - September 2011
+        description: |
+          - Administered 200+ Linux servers in a 24x7 environment, corporate Asterisk PBX phone systems, automated configurations with Puppet, and implemented Nagios monitoring.
+
+      - title: IT Production Support Engineer
+        sub_title: June 2008 - January 2010
+        description: |
+          - Supporting operations of web-based CRM systems for supported sales staff, managing geo-coding services, indirect dealer systems, and coordinating system-wide outage responses.
+
+      - title: Lead Network Operations Engineer
+        sub_title: December 2006 - June 2008
+        description: |
+          - Led NOC operations for a nationwide OSI level 2 network, coordinating site provisioning and network outage repairs.
+
+      - layout: left
+        boarder: weak
+        title: Logistic Systems, Inc.
+        sub_title: Record Management Systems Engineer
+        caption: June 2005 - October 2006
+        description: |
+          - Provided remote support for custom record management software and managed IBM AIX and Windows Server systems for municipal departments.
+
+      - layout: left
+        boarder: weak
+        title: University of Montana
+        sub_title: OS X Systems Administrator
+        caption: June 2004 - August 2005
+        description: |
+          - Managed a computer lab and server environment for the university’s newspaper, supporting journalism students and upgrading the website backend.
+
 footer_show_references: true
 references_title: References on request
 
