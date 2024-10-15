@@ -101,6 +101,11 @@ content:
         quote: >
           Featured on KPAX News for launching the Missoula Valley Internet Co-op network, providing broadband service to underserved areas in Missoula, MT.
         link: https://www.youtube.com/watch?v=FBwfHBQqZcs
+      - layout: top-middle
+        title: ILSR: In Missoula, Montana, a Wireless Mesh Network Builds Community and Connections
+        quote: >
+          An article written by Ry Marcattilio, published by the Institue for Local Self-Reliance on December 14, 2021, covering the intial formation and development of the Missoula Valley Internet Co-op using Althea's DePIN wireless mesh-networking platform.
+        link: https://communitynets.org/content/missoula-montana-wireless-mesh-network-builds-community-and-connections
 
   - title: Experience
     layout: list
