@@ -199,10 +199,10 @@ content:
         description: |
           - Supporting operations of web-based CRM systems for supported sales staff, managing geo-coding services, indirect dealer systems, and coordinating system-wide outage responses.
 
-      - title: Lead Network Operations Engineer
+      - title: Network Operations Technician - Shift Lead
         sub_title: December 2006 - June 2008
         description: |
-          - Led NOC operations for a nationwide OSI level 2 network, coordinating site provisioning and network outage repairs.
+          - Shift lead for NOC operations for a nationwide OSI layer 2 WISP network, coordinating site provisioning and network outage repairs.
 
       - layout: left
         boarder: weak
