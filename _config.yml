@@ -133,6 +133,15 @@ content:
 
       - layout: left
         border: weak
+        title: Montana Economic Developers Association
+        sub_title: Broadband Improvement Advisory Committee Member
+        caption: July 2021 - December 2021
+        description: |
+          - Served as a member of an advisory committee tasked with advising state representatives on standards and requirements for allocating federal funds under House Bill 632, which implemented the American Rescue Plan Act (ARPA). Our recommendations contributed to the drafting of Montana Senate Bill 297, which established the ConnectMT Act program to expand broadband infrastructure across the state.
+          - Spearheaded the goal of rasing standard for broadband connectivity to deliver 100mb/s symmetric speeds where technically and financially feasible.
+
+      - layout: left
+        border: weak
         title: SolluCIO
         sub_title: Linux System Engineer
         caption: July 2019 - November 2019
