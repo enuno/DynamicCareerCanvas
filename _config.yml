@@ -77,7 +77,7 @@ content:
          - Strategic Planning
          - Project Management
 
-  title: Publications, Presentations, and Projects
+  - title: Publications, Presentations, and Projects
     layout: list
     content:
       - layout: top-middle
