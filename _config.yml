@@ -180,14 +180,6 @@ content:
 
       - layout: left
         boarder: weak
-        title: CDK Global
-        sub_title: Senior Linux Systems Automations Engineer
-        caption: October 2014 - June 2015
-        description: |
-          - Automated cloud provisioning and scaling with Puppet in a multi-datacenter environment; developed a distributed monitoring platform using Icinga.
-
-      - layout: left
-        boarder: weak
         title: Salesforce
         sub_title: Senior Linux Systems Automations Engineer
         caption: Febuary 2014 - October 2014
