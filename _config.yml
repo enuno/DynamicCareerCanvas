@@ -77,7 +77,7 @@ content:
          - Strategic Planning
          - Project Management
 
-  - title: Publications, Presentations, and Projects
+  title: Publications, Presentations, and Projects
     layout: list
     content:
       - layout: top-middle
@@ -107,6 +107,12 @@ content:
         quote: >
           An article written by Ry Marcattilio, published by the Institue for Local Self-Reliance on December 14, 2021, covering the intial formation and development of the Missoula Valley Internet Co-op using Althea's DePIN wireless mesh-networking platform.
         link: https://communitynets.org/content/missoula-montana-wireless-mesh-network-builds-community-and-connections
+      - layout: top-middle
+        border: weak
+        title: Montana Economic Developers Association Broadband Improvement Advisory Committee Member
+        quote: >
+          Served as a member of an advisory committee tasked with advising state representatives on standards and requirements for allocating federal funds under House Bill 632, which implemented the American Rescue Plan Act (ARPA). Our recommendations contributed to the drafting of Montana Senate Bill 297, which established the ConnectMT Act program to expand broadband infrastructure across the state.
+        link: https://connectmt.mt.gov/General-Information/
 
   - title: Experience
     layout: list
@@ -130,15 +136,6 @@ content:
           - Led engineering and deployment of community-owned ISPs in underserved rural communities in Montana.
           - Secured grants and community funds to deliver broadband-quality service to areas outside traditional ISP profit models.
           - Collaborated with DePIN projects like Althea, Nym, and Helium to deploy distributed internet, IoT connectivity, and privacy infrastructure.
-
-      - layout: left
-        border: weak
-        title: Montana Economic Developers Association
-        sub_title: Broadband Improvement Advisory Committee Member
-        caption: July 2021 - December 2021
-        description: |
-          - Served as a member of an advisory committee tasked with advising state representatives on standards and requirements for allocating federal funds under House Bill 632, which implemented the American Rescue Plan Act (ARPA). Our recommendations contributed to the drafting of Montana Senate Bill 297, which established the ConnectMT Act program to expand broadband infrastructure across the state.
-          - Spearheaded the goal of rasing standard for broadband connectivity to deliver 100mb/s symmetric speeds where technically and financially feasible.
 
       - layout: left
         border: weak
@@ -180,6 +177,22 @@ content:
         caption: October 2014 - June 2015
         description: |
           - Automated cloud provisioning and scaling with Puppet in a multi-datacenter environment; developed a distributed monitoring platform using Icinga.
+
+      - layout: left
+        boarder: weak
+        title: CDK Global
+        sub_title: Senior Linux Systems Automations Engineer
+        caption: October 2014 - June 2015
+        description: |
+          - Automated cloud provisioning and scaling with Puppet in a multi-datacenter environment; developed a distributed monitoring platform using Icinga.
+
+      - layout: left
+        boarder: weak
+        title: Salesforce
+        sub_title: Senior Linux Systems Automations Engineer
+        caption: Febuary 2014 - October 2014
+        description: |
+          - Managed a 500+ server environment on IBM SoftLayer for a PHP-based marketing and sales web application, utilizing Chef for configuration management, Bamboo for automated builds, and supporting rolling releases, while also engineering an OpenStack private cloud migration, managing large-scale MySQL master/master replication, and providing 24/7 on-call infrastructure support.
 
       - layout: left
         boarder: weak
