@@ -86,6 +86,12 @@ content:
         link: https://bsi-mt.notion.site/9391097364e84f33968423a0b0a7a230
         quote: >
           Authored and freely published an online guide to assist rural communities in forming local ISPs and constructing community-owned internet infrastructure.
+        - layout: top-middle
+        border: weak
+        title: Nostr
+        link: https://yakihonne.com/users/npub1qnl45ujgr5vmkyg0vslwuq7hwsj7zytwj5jrkm09tsxajg460vks8j5z3d
+        quote: >
+          A collection of articles published on blockchain and other trends in technological development.
       - layout: top-middle
         title: NymBox
         quote: >
