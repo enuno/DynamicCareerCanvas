@@ -17,7 +17,8 @@ social:
 # About Section
 about:
   title: "About Me"
-  image: "images/profile_image.jpg"
+  image: "assets/images/profile/profile.png"
+  banner: "assets/images/profile/banner.jpg"
   bio: |
     As a dynamic and innovative technology solutions architect, experienced systems engineer, and Blockchain, Web3, and DePIN evangelist, I specialize in helping professionals and organizations navigate their evolving technological journeys. With 20 years of hands-on experience in building and optimizing ISP and telecom infrastructure, I blend strategic insights with advanced tools to improve business operations and empower individuals in shaping their career paths with clarity and confidence. My expertise is largely focused in designing technical and organizational frameworks that enable sustainable growth, future-focused development, and the strategic adoption of decentralized technologies that demonstrate a strong value in practical real-world applications to improve and modernize critical infrastructure.
 

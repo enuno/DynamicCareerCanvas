@@ -19,11 +19,6 @@ sass:
   sass_dir: _sass
   style: compressed
 
-# Collections
-collections:
-  data:
-    output: false
-
 # Plugins
 plugins:
   - jekyll-seo-tag

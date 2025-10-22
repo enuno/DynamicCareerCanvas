@@ -1,83 +1,243 @@
-// Hero section
+// Hero Component
+// Eye-catching hero section with banner and profile image
 
-.hero {
-  display: grid;
-  gap: var(--spacing-2xl);
+.section--hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 600px;
+  display: flex;
   align-items: center;
-  padding: var(--spacing-3xl) 0;
+  background: var(--gradient-hero);
 
-  @media (min-width: $breakpoint-md) {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  &__content {
-    text-align: center;
-
-    @media (min-width: $breakpoint-md) {
-      text-align: left;
-    }
-  }
-
-  &__title {
-    font-size: var(--font-size-4xl);
-    margin-bottom: var(--spacing-sm);
-    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-
-    @media (max-width: $breakpoint-md) {
-      font-size: var(--font-size-3xl);
-    }
-  }
-
-  &__subtitle {
-    font-size: var(--font-size-xl);
-    color: var(--color-text-secondary);
-    margin-bottom: var(--spacing-md);
-
-    @media (max-width: $breakpoint-md) {
-      font-size: var(--font-size-lg);
-    }
-  }
-
-  &__location {
-    font-size: var(--font-size-base);
-    color: var(--color-text-secondary);
-    margin-bottom: var(--spacing-xl);
-  }
-
-  &__actions {
-    display: flex;
-    gap: var(--spacing-md);
-    justify-content: center;
-
-    @media (min-width: $breakpoint-md) {
-      justify-content: flex-start;
-    }
-
-    @media (max-width: $breakpoint-sm) {
-      flex-direction: column;
-    }
-  }
-
-  &__image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      width: 100%;
-      max-width: 400px;
-      height: auto;
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-lg);
-    }
+  @media (max-width: $breakpoint-md) {
+    min-height: 500px;
   }
 }
 
-// Section hero variant (for pages)
-.section--hero {
-  background: linear-gradient(135deg, var(--color-background), var(--color-surface));
-  border-bottom: 1px solid var(--color-border);
+.hero__banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg,
+    rgba(102, 126, 234, 0.9) 0%,
+    rgba(118, 75, 162, 0.85) 50%,
+    rgba(240, 147, 251, 0.8) 100%
+  );
+  backdrop-filter: blur(2px);
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-2xl);
+  padding: var(--spacing-3xl) 0;
+
+  @media (min-width: $breakpoint-lg) {
+    padding: var(--spacing-3xl) 0;
+  }
+}
+
+.hero__image-wrapper {
+  position: relative;
+  animation: fadeInDown 1s ease-out;
+}
+
+.hero__profile-image {
+  width: 180px;
+  height: 180px;
+  border-radius: var(--radius-full);
+  border: 6px solid rgba(255, 255, 255, 0.9);
+  box-shadow:
+    var(--shadow-xl),
+    0 0 40px rgba(255, 255, 255, 0.3),
+    0 0 80px rgba(102, 126, 234, 0.4);
+  object-fit: cover;
+  transition: all var(--transition-slow);
+
+  &:hover {
+    transform: scale(1.05) rotate(2deg);
+    box-shadow:
+      var(--shadow-xl),
+      0 0 60px rgba(255, 255, 255, 0.5),
+      0 0 100px rgba(102, 126, 234, 0.6);
+  }
+
+  @media (min-width: $breakpoint-md) {
+    width: 220px;
+    height: 220px;
+    border-width: 8px;
+  }
+}
+
+.hero__content {
+  text-align: center;
+  color: #ffffff;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero__title {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-md);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  animation: slideInFromLeft 0.8s ease-out;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: var(--font-size-5xl);
+  }
+}
+
+.hero__subtitle {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-normal);
+  margin-bottom: var(--spacing-md);
+  opacity: 0.95;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  animation: slideInFromRight 0.8s ease-out;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+.hero__location {
+  font-size: var(--font-size-lg);
+  opacity: 0.9;
+  margin-bottom: var(--spacing-lg);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-out 0.3s both;
+}
+
+.hero__bio {
+  max-width: 800px;
+  margin: 0 auto var(--spacing-xl);
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-relaxed);
+  opacity: 0.9;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1s ease-out 0.5s both;
+
+  p {
+    margin: 0;
+  }
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  justify-content: center;
+  animation: fadeInUp 1s ease-out 0.7s both;
+}
+
+// Animations
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// Floating animation for subtle movement
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hero__image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #667eea);
+  background-size: 300% 300%;
+  border-radius: var(--radius-full);
+  z-index: -1;
+  animation: gradientShift 4s ease infinite;
+  opacity: 0.6;
+  filter: blur(20px);
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }

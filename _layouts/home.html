@@ -2,29 +2,41 @@
 layout: default
 ---
 
-<!-- Hero Section -->
+<!-- Hero Section with Banner -->
 <section class="section section--hero">
+  {% if site.data.profile.about.banner %}
+  <div class="hero__banner">
+    <img src="{{ site.data.profile.about.banner | relative_url }}" alt="Banner">
+    <div class="hero__overlay"></div>
+  </div>
+  {% endif %}
   <div class="container">
     <div class="hero">
+      {% if site.data.profile.about.image %}
+      <div class="hero__image-wrapper">
+        <img src="{{ site.data.profile.about.image | relative_url }}" alt="{{ site.data.profile.name }}" class="hero__profile-image">
+      </div>
+      {% endif %}
       <div class="hero__content">
         <h1 class="hero__title">{{ site.data.profile.name }}</h1>
         <p class="hero__subtitle">{{ site.data.profile.title }}</p>
 
         {% if site.data.profile.location %}
-        <p class="hero__location">{{ site.data.profile.location }}</p>
+        <p class="hero__location">📍 {{ site.data.profile.location }}</p>
+        {% endif %}
+
+        {% if site.data.profile.about.bio %}
+        <div class="hero__bio">
+          {{ site.data.profile.about.bio | truncatewords: 50 }}
+        </div>
         {% endif %}
 
         <div class="hero__actions">
-          <a href="#experience" class="button">View Experience</a>
+          <a href="#experience" class="button button--primary">View Experience</a>
           <a href="#projects" class="button button--secondary">See Projects</a>
+          <a href="{{ '/assets/files/resume.pdf' | relative_url }}" class="button button--outline" target="_blank">📄 Download Resume</a>
         </div>
       </div>
-
-      {% if site.data.profile.about.image %}
-      <div class="hero__image">
-        <img src="{{ site.data.profile.about.image | relative_url }}" alt="{{ site.data.profile.name }}">
-      </div>
-      {% endif %}
     </div>
   </div>
 </section>
@@ -101,13 +113,16 @@ layout: default
       <h2 class="section__title">Get In Touch</h2>
     </div>
     <div class="section__content text-center">
-      <p>Interested in working together? Let's connect!</p>
+      <p>Interested in working together? <a href="https://linkedin.com/in/{{ site.data.profile.social.linkedin }}" class="link-highlight" target="_blank" rel="noopener noreferrer">Let's connect!</a></p>
       <div class="mt-lg">
         {% if site.data.profile.email %}
-        <a href="mailto:{{ site.data.profile.email }}" class="button">Email Me</a>
+        <a href="mailto:{{ site.data.profile.email }}" class="button">📧 Email Me</a>
         {% endif %}
         {% if site.data.profile.social.linkedin %}
-        <a href="https://linkedin.com/in/{{ site.data.profile.social.linkedin }}" class="button button--secondary" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://linkedin.com/in/{{ site.data.profile.social.linkedin }}" class="button button--secondary" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
+        {% endif %}
+        {% if site.data.profile.social.github %}
+        <a href="https://github.com/{{ site.data.profile.social.github }}" class="button button--outline" target="_blank" rel="noopener noreferrer">🐙 GitHub</a>
         {% endif %}
       </div>
     </div>
