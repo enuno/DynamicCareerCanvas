@@ -1,6 +1,50 @@
 # Work Experience
 # Most recent first
 
+- company: "Ryno Crypto Mining Services"
+  title: "CEO"
+  location: "United States"
+  start_date: "2025-10"
+  end_date: null
+  current: true
+  description: |
+    Founded and lead the creation and commercialization of TerraHash Stack — a next-generation bitcoin mining platform redefining efficiency, scalability, and sustainability in crypto infrastructure through AI-driven automation and renewable-powered operations.
+  highlights:
+    - "Conceived and architected TerraHash Stack ecosystem from inception, integrating open hardware, AI-driven performance automation, and liquid-cooled datacenter designs"
+    - "Established strategic corporate partnerships delivering up to 40% higher hash rates, 50% improved uptime, and 75% energy reduction versus traditional designs"
+    - "Pioneered fully autonomous mining facilities capable of scaling from sub-$100K enthusiast setups to 10MW+ commercial operations"
+    - "Structured multi-million-dollar projects including 5MW pilot facility with 48-month breakeven and $80M+ forecasted 30-year ROI"
+    - "Designed automated reinvestment, hedging, and portfolio management mechanisms enabling sustainable profitability despite network volatility"
+    - "Advocated net-zero principles through integration with off-grid renewable generation and waste-heat recovery systems"
+  technologies:
+    - "Bitcoin Mining"
+    - "AI Automation"
+    - "Renewable Energy"
+    - "Liquid Cooling"
+    - "Infrastructure Design"
+    - "Blockchain"
+
+- company: "ServerDomes"
+  title: "WAN Network Architect & Technical Solutions Consultant"
+  location: "United States"
+  start_date: "2025-03"
+  end_date: null
+  current: true
+  description: |
+    Architecting long-haul fiber WAN infrastructure connecting decentralized network of next-generation edge data centers with fault-tolerant, low-latency tier-1 carrier-blended bandwidth solutions.
+  highlights:
+    - "Designed long-haul fiber WAN infrastructure for decentralized edge datacenter network"
+    - "Engineered fault-tolerant, low-latency tier-1 carrier-blended bandwidth solutions"
+    - "Architected scalable network infrastructure supporting cloud compute, AI workloads, and telecommunications"
+    - "Delivered infrastructure solutions for Web3 applications and blockchain workloads"
+  technologies:
+    - "Fiber WAN"
+    - "Edge Computing"
+    - "Network Architecture"
+    - "Cloud Infrastructure"
+    - "Web3"
+    - "Blockchain"
+
 - company: "Centric Internet Services"
   title: "Director of Network Operations"
   location: "Missoula, Montana"
