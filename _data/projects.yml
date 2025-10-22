@@ -1,6 +1,54 @@
 # Projects and Publications
 # Most recent/featured first
 
+- name: "UniFi MCP Server"
+  type: "project"
+  featured: true
+  year: 2024
+  status: "active"
+  description: "Model Context Protocol (MCP) server that exposes the UniFi Network Controller API, enabling AI agents and applications to interact with UniFi network infrastructure. Features comprehensive network management capabilities, Redis caching, webhook support, and production-grade security with 105+ unit tests."
+  url: "https://github.com/enuno/unifi-mcp-server"
+  technologies:
+    - "Python"
+    - "Model Context Protocol"
+    - "Docker"
+    - "UniFi API"
+    - "Redis"
+    - "AI Integration"
+  image: null
+
+- name: "Ansible Akash Provider"
+  type: "project"
+  featured: true
+  year: 2024
+  status: "development"
+  description: "Infrastructure-as-code automation for deploying Akash Cloud Provider on Kubernetes. Implements best practices for blockchain node management, cluster orchestration, and provider services with full-stack deployment automation including TLS certificates, persistent storage, and IP leasing."
+  url: "https://github.com/enuno/ansible-akash-provider"
+  technologies:
+    - "Ansible"
+    - "Kubernetes"
+    - "Akash"
+    - "Helm"
+    - "Blockchain"
+    - "Infrastructure as Code"
+  image: null
+
+- name: "Ansible Handshake DNS"
+  type: "project"
+  featured: true
+  year: 2024
+  status: "active"
+  description: "Automated deployment of decentralized DNS infrastructure combining Handshake blockchain with traditional DNS services. Features DNS-over-TLS/HTTPS support, HIP-5 protocol compatibility for ENS/IPFS/Tor resolution, and automated certificate management via Let's Encrypt."
+  url: "https://github.com/enuno/ansible-handshake-dns"
+  technologies:
+    - "Ansible"
+    - "Handshake"
+    - "Docker"
+    - "DNS-over-TLS"
+    - "Unbound"
+    - "Blockchain DNS"
+  image: null
+
 - name: "Community ISP Handbook"
   type: "publication"
   featured: true
