@@ -2,13 +2,13 @@
   <div class="container">
     <nav class="nav">
       <div class="nav__brand">
-        <a href="/" class="nav__logo">{{ site.data.profile.name }}</a>
+        <a href="{{ '/' | relative_url }}" class="nav__logo">{{ site.data.profile.name }}</a>
       </div>
 
       <ul class="nav__menu">
         {% for item in site.data.site.navigation %}
         <li class="nav__item">
-          <a href="{{ item.url }}" class="nav__link">{{ item.title }}</a>
+          <a href="{{ item.url | relative_url }}" class="nav__link">{{ item.title }}</a>
         </li>
         {% endfor %}
       </ul>
