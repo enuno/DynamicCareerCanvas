@@ -1,0 +1,53 @@
+// Section / Page layout styles
+
+.section {
+  padding: var(--spacing-3xl) 0;
+
+  &__header {
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+  }
+
+  &__title {
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  &__subtitle {
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+  }
+
+  &__content {
+    margin-top: var(--spacing-lg);
+  }
+
+  @media (max-width: $breakpoint-md) {
+    padding: var(--spacing-xl) 0;
+
+    &__title {
+      font-size: var(--font-size-2xl);
+    }
+  }
+}
+
+// Grid layout for sections
+.grid {
+  display: grid;
+  gap: var(--spacing-lg);
+  grid-template-columns: 1fr;
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &--2-col {
+    @media (min-width: $breakpoint-md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

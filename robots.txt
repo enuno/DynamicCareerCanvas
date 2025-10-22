@@ -1,0 +1,13 @@
+---
+layout: null
+---
+# robots.txt for {{ site.url }}
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: {{ site.url }}/sitemap.xml
+
+# LLM/AI Discovery
+# See llm.txt and llm-all.txt for AI-specific information

@@ -1,0 +1,12 @@
+<!-- Component: Skill Group
+     Displays a category of skills
+     Usage: {% include components/skill-group.html group=skill_group %} -->
+
+<div class="skill-group">
+  <h3 class="skill-group__category">{{ include.group.category }}</h3>
+  <ul class="skill-group__skills">
+    {% for skill in include.group.skills %}
+    <li><span class="badge">{{ skill }}</span></li>
+    {% endfor %}
+  </ul>
+</div>

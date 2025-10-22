@@ -1,0 +1,33 @@
+# Site Configuration Data
+# Separate from Jekyll _config.yml for easier editing
+
+# Site Metadata
+title: "Elvis Nuno - Technology Solutions Architect"
+description: "Professional portfolio showcasing 20 years of experience in systems architecture, DevOps, and blockchain/DePIN technologies."
+keywords: "technology solutions architect, systems engineer, DevOps, blockchain, Web3, DePIN, ISP, telecom"
+
+# Features
+features:
+  dark_mode: true
+  animations: true
+  responsive: true
+
+# Navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/#about"
+  - title: "Experience"
+    url: "/#experience"
+  - title: "Projects"
+    url: "/#projects"
+  - title: "Skills"
+    url: "/#skills"
+  - title: "Resume"
+    url: "/resume"
+
+# Footer
+footer:
+  copyright: "© 2025 Elvis Nuno. All rights reserved."
+  build_info: true

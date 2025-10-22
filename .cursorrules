@@ -1,0 +1,93 @@
+# Cursor AI Rules for DynamicCareerCanvas
+
+# Read full documentation in CURSOR.md and AGENTS.md
+
+## Project Type
+Jekyll static site generator for professional portfolio
+
+## Tech Stack
+- Jekyll 4.x
+- Liquid templating
+- YAML data files
+- SCSS styling
+- Vanilla JavaScript (no frameworks)
+- GitHub Pages hosting
+
+## Core Rules
+
+### DO
+- Follow existing code patterns
+- Keep it simple and readable
+- Use YAML files in _data/ for content
+- Use CSS variables for theming
+- Make everything mobile responsive
+- Add alt text to all images
+- Test with: bundle exec jekyll build
+- Include AI attribution in commits
+
+### DON'T
+- Add React, Vue, jQuery, or other frameworks
+- Use inline styles
+- Hardcode content in templates
+- Skip mobile testing
+- Remove accessibility features
+- Commit without building first
+- Add API keys or secrets
+
+## File Structure
+
+Content (edit often):
+- _data/experience.yml
+- _data/projects.yml
+- _data/skills.yml
+- _data/publications.yml
+
+Templates:
+- _includes/components/ (reusable UI)
+- _layouts/ (page layouts)
+
+Styles:
+- _sass/base/ (variables, base styles)
+- _sass/components/ (component styles)
+- _sass/layout/ (layout styles)
+
+## Code Style
+
+### YAML
+company: "Company Name"
+title: "Job Title"
+start_date: "YYYY-MM"
+description: |
+  Multi-line text
+
+### HTML/Liquid
+<!-- Comment explaining component -->
+<div class="component-name">
+  {{ include.data.title }}
+</div>
+
+### SCSS
+.component-name {
+  padding: var(--spacing-md);
+
+  @media (max-width: 768px) {
+    padding: var(--spacing-sm);
+  }
+}
+
+### JavaScript
+const init = () => {
+  // Modern ES6+, no jQuery
+};
+document.addEventListener('DOMContentLoaded', init);
+
+## Testing
+Always run before committing:
+bundle exec jekyll build
+
+For live preview:
+bundle exec jekyll serve --livereload
+
+## AI Attribution
+Include in commits:
+AI-Assisted: Cursor IDE

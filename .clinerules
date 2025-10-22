@@ -1,0 +1,78 @@
+# Cline Rules - Quick Reference
+
+# Full docs: CLINERULES.md, AGENTS.md
+
+## Project
+Jekyll portfolio site - DynamicCareerCanvas
+
+## Stack
+Jekyll, YAML data, SCSS, Vanilla JS, GitHub Pages
+
+## Core Rules
+
+### Must Follow
+- Read .ai/CONTEXT.md before starting
+- NO frameworks (React, Vue, jQuery, etc.)
+- Content in YAML files (_data/)
+- Use CSS variables
+- Mobile-first responsive
+- Support light/dark mode
+- Test builds: bundle exec jekyll build
+- Include AI attribution in commits
+
+### File Structure
+_data/ - YAML content
+_includes/components/ - UI components
+_layouts/ - Page templates
+_sass/ - Styles
+assets/ - Static files
+
+### Code Style
+
+YAML:
+company: "Name"
+date: "YYYY-MM"
+
+HTML/Liquid:
+<div class="component-name">
+  {{ data.field }}
+</div>
+
+SCSS:
+.component {
+  property: var(--variable);
+
+  @media (max-width: 768px) {
+    // mobile
+  }
+}
+
+JavaScript:
+// ES6+, no frameworks
+const fn = () => {};
+
+### Workflow
+1. Plan approach
+2. Read context files
+3. Make changes
+4. Test build
+5. Verify in browser
+6. Commit with attribution
+
+### Testing
+bundle exec jekyll build
+bundle exec jekyll serve --livereload
+
+### Attribution
+AI-Assisted: Cline
+Autonomous execution
+Co-Authored-By: Cline <noreply@anthropic.com>
+
+## Common Tasks
+- Add experience: _data/experience.yml
+- Add project: _data/projects.yml
+- New component: _includes/components/name.html + _sass/components/_name.scss
+- Update styles: _sass/
+
+## More Info
+CLINERULES.md, AGENTS.md, .ai/CONTEXT.md

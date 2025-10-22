@@ -1,0 +1,78 @@
+# AI Ignore File
+# Similar to .gitignore but for AI coding assistants
+# Exclude these files/directories from AI analysis and code generation
+
+# Git
+.git/
+.gitignore
+
+# Dependencies
+node_modules/
+vendor/
+.bundle/
+
+# Build outputs
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Lock files (don't modify these)
+Gemfile.lock
+package-lock.json
+yarn.lock
+
+# Sensitive (should also be in .gitignore)
+.env
+.env.local
+*.key
+*.pem
+secrets/
+
+# Large binary files
+*.zip
+*.tar
+*.tar.gz
+*.pdf
+*.dmg
+*.exe
+
+# Images (reference but don't analyze)
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
+*.ico
+*.webp
+
+# Documentation that doesn't need AI modification
+LICENSE
+CHANGELOG.md
+
+# Test outputs
+coverage/
+.nyc_output/
+test-results/

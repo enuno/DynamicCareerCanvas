@@ -1,0 +1,27 @@
+<header class="site-header">
+  <div class="container">
+    <nav class="nav">
+      <div class="nav__brand">
+        <a href="/" class="nav__logo">{{ site.data.profile.name }}</a>
+      </div>
+
+      <ul class="nav__menu">
+        {% for item in site.data.site.navigation %}
+        <li class="nav__item">
+          <a href="{{ item.url }}" class="nav__link">{{ item.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+
+      <button class="nav__toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-toggle__icon">🌙</span>
+      </button>
+    </nav>
+  </div>
+</header>

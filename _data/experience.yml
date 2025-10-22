@@ -1,0 +1,263 @@
+# Work Experience
+# Most recent first
+
+- company: "Centric Internet Services"
+  title: "Director of Network Operations"
+  location: "Missoula, Montana"
+  start_date: "2024-01"
+  end_date: "2024-08"
+  current: false
+  description: |
+    Led the successful integration of two distinct ISP networks, ensuring seamless merging with minimal downtime.
+  highlights:
+    - "Led the successful integration of two distinct ISP networks, overseeing engineering and strategic planning to ensure seamless merging with minimal downtime"
+    - "Identified and addressed vulnerabilities within legacy infrastructure, developing and executing comprehensive migration strategies to enhance network reliability and performance"
+    - "Designed and implemented future-proof solutions for core network infrastructure, advancing wireless ISP and decentralized DeWi technology to meet evolving customer demands"
+  technologies:
+    - "BGP"
+    - "OSPF"
+    - "VRRP"
+    - "Wireless ISP"
+    - "DeWi"
+
+- company: "Pacific NW Rural Broadband Alliance"
+  title: "President, Co-Founder, Head of Operations"
+  location: "Missoula, Montana"
+  start_date: "2019-11"
+  end_date: "2024-01"
+  current: false
+  description: |
+    Led the non-profit organization in engineering and deploying community-owned and operated ISPs in underserved rural communities in Montana.
+  highlights:
+    - "Led engineering and deployment of community-owned ISPs in underserved rural communities in Montana"
+    - "Secured grants and community funds to deliver broadband-quality service to areas outside traditional ISP profit models"
+    - "Collaborated with DePIN projects like Althea, Nym, and Helium to deploy distributed internet, IoT connectivity, and privacy infrastructure"
+  technologies:
+    - "Althea"
+    - "Nym"
+    - "Helium"
+    - "Community ISP"
+    - "DePIN"
+
+- company: "SolluCIO"
+  title: "Linux System Engineer"
+  location: "Missoula, Montana"
+  start_date: "2019-07"
+  end_date: "2019-11"
+  current: false
+  description: |
+    Built a high-availability, cloud-based eCommerce platform, optimizing security and performance for a grocery store chain in Hawaii.
+  highlights:
+    - "Designed and implemented high-availability eCommerce platform on cloud infrastructure"
+    - "Optimized security configurations and performance tuning"
+    - "Managed deployment across multiple regions for grocery store chain"
+  technologies:
+    - "Linux"
+    - "Cloud Infrastructure"
+    - "eCommerce"
+    - "High Availability"
+
+- company: "REW Consulting Services"
+  title: "Solutions Architect & Technical Consultant"
+  location: "Remote"
+  start_date: "2018-06"
+  end_date: "2019-02"
+  current: false
+  description: |
+    Provided consulting on DevOps best practices, Ansible automation, and Jenkins CI/CD pipelines for telecom providers.
+  highlights:
+    - "Consulted for national and international telecom providers on DevOps transformation"
+    - "Implemented Ansible automation for infrastructure configuration management"
+    - "Designed and deployed Jenkins CI/CD pipelines for continuous delivery"
+  technologies:
+    - "Ansible"
+    - "Jenkins"
+    - "DevOps"
+    - "CI/CD"
+    - "Telecom"
+
+- company: "goMoxie"
+  title: "Lead DevOps Engineer - Cloud Services"
+  location: "Bellevue, WA"
+  start_date: "2016-06"
+  end_date: "2016-12"
+  current: false
+  description: |
+    Led a team to establish DevOps best practices and transitioned siloed teams to a unified model. Automated infrastructure on VMware and AWS.
+  highlights:
+    - "Led team in establishing DevOps best practices and culture transformation"
+    - "Transitioned siloed operations to unified DevOps model"
+    - "Automated infrastructure provisioning on VMware and AWS platforms"
+  technologies:
+    - "AWS"
+    - "VMware"
+    - "DevOps"
+    - "Infrastructure Automation"
+
+- company: "McGraw-Hill Education"
+  title: "Senior DevOps Engineer"
+  location: "Seattle, WA"
+  start_date: "2015-06"
+  end_date: "2016-03"
+  current: false
+  description: |
+    Managed pre-production environments and production deployments on AWS, supporting online educational courseware.
+  highlights:
+    - "Managed pre-production and production environments on AWS"
+    - "Developed CloudFormation scripts for infrastructure as code"
+    - "Created Puppet modules for configuration management"
+    - "Built Jenkins pipelines for automated software builds and deployments"
+  technologies:
+    - "AWS"
+    - "CloudFormation"
+    - "Puppet"
+    - "Jenkins"
+
+- company: "CDK Global"
+  title: "Senior Linux Systems Automations Engineer"
+  location: "Portland, OR"
+  start_date: "2014-10"
+  end_date: "2015-06"
+  current: false
+  description: |
+    Automated cloud provisioning and scaling with Puppet in a multi-datacenter environment; developed a distributed monitoring platform using Icinga.
+  highlights:
+    - "Automated cloud provisioning and scaling using Puppet"
+    - "Managed multi-datacenter infrastructure environment"
+    - "Developed distributed monitoring platform with Icinga"
+  technologies:
+    - "Puppet"
+    - "Icinga"
+    - "Linux"
+    - "Cloud Automation"
+
+- company: "Salesforce"
+  title: "Senior Linux Systems Automations Engineer"
+  location: "Bellevue, WA"
+  start_date: "2014-02"
+  end_date: "2014-10"
+  current: false
+  description: |
+    Managed a 500+ server environment on IBM SoftLayer for a PHP-based marketing and sales web application.
+  highlights:
+    - "Managed 500+ server environment on IBM SoftLayer infrastructure"
+    - "Utilized Chef for configuration management across large-scale deployment"
+    - "Implemented Bamboo for automated builds and continuous integration"
+    - "Engineered OpenStack private cloud migration strategy"
+    - "Managed large-scale MySQL master/master replication"
+    - "Provided 24/7 on-call infrastructure support"
+  technologies:
+    - "IBM SoftLayer"
+    - "Chef"
+    - "Bamboo"
+    - "OpenStack"
+    - "MySQL"
+    - "PHP"
+
+- company: "Clearwire"
+  title: "DevOps Release Manager"
+  location: "Bellevue, WA"
+  start_date: "2011-10"
+  end_date: "2013-10"
+  current: false
+  description: |
+    Led deployments for high-traffic e-commerce sites and managed pre-production environments, migrating to VMware virtual servers.
+  highlights:
+    - "Led production deployments for high-traffic e-commerce platforms"
+    - "Managed pre-production environment infrastructure"
+    - "Executed migration from physical to VMware virtual server infrastructure"
+  technologies:
+    - "VMware"
+    - "Release Management"
+    - "E-commerce"
+
+- company: "Clearwire"
+  title: "Linux Systems Administrator"
+  location: "Bellevue, WA"
+  start_date: "2010-01"
+  end_date: "2011-09"
+  current: false
+  description: |
+    Administered 200+ Linux servers in a 24x7 environment, corporate Asterisk PBX phone systems, automated configurations with Puppet, and implemented Nagios monitoring.
+  highlights:
+    - "Administered 200+ Linux servers in 24x7 production environment"
+    - "Managed corporate Asterisk PBX phone systems"
+    - "Automated server configurations using Puppet"
+    - "Implemented comprehensive Nagios monitoring infrastructure"
+  technologies:
+    - "Linux"
+    - "Asterisk"
+    - "Puppet"
+    - "Nagios"
+
+- company: "Clearwire"
+  title: "IT Production Support Engineer"
+  location: "Bellevue, WA"
+  start_date: "2008-06"
+  end_date: "2010-01"
+  current: false
+  description: |
+    Supporting operations of web-based CRM systems for supported sales staff, managing geo-coding services, indirect dealer systems, and coordinating system-wide outage responses.
+  highlights:
+    - "Supported web-based CRM systems for sales organization"
+    - "Managed geo-coding services for location-based functionality"
+    - "Maintained indirect dealer systems"
+    - "Coordinated system-wide outage response and resolution"
+  technologies:
+    - "CRM"
+    - "Web Applications"
+    - "Geo-coding"
+
+- company: "Clearwire"
+  title: "Network Operations Technician - Shift Lead"
+  location: "Bellevue, WA"
+  start_date: "2006-12"
+  end_date: "2008-06"
+  current: false
+  description: |
+    Shift lead for NOC operations for a nationwide OSI layer 2 WISP network, coordinating site provisioning and network outage repairs.
+  highlights:
+    - "Led NOC shift operations for nationwide WISP network"
+    - "Coordinated site provisioning and deployment activities"
+    - "Managed network outage troubleshooting and repair coordination"
+    - "Operated OSI Layer 2 wireless infrastructure"
+  technologies:
+    - "WISP"
+    - "Network Operations"
+    - "Layer 2"
+
+- company: "Logistic Systems, Inc."
+  title: "Record Management Systems Engineer"
+  location: "Missoula, Montana"
+  start_date: "2005-06"
+  end_date: "2006-10"
+  current: false
+  description: |
+    Provided remote support for custom record management software and managed IBM AIX and Windows Server systems for municipal departments.
+  highlights:
+    - "Provided remote support for custom record management software"
+    - "Managed IBM AIX unix server infrastructure"
+    - "Administered Windows Server systems for municipal clients"
+    - "Supported government and municipal department operations"
+  technologies:
+    - "IBM AIX"
+    - "Windows Server"
+    - "Record Management Systems"
+
+- company: "University of Montana"
+  title: "OS X Systems Administrator"
+  location: "Missoula, Montana"
+  start_date: "2004-06"
+  end_date: "2005-08"
+  current: false
+  description: |
+    Managed a computer lab and server environment for the university's newspaper, supporting journalism students and upgrading the website backend.
+  highlights:
+    - "Managed computer lab infrastructure for university newspaper"
+    - "Administered OS X server environment"
+    - "Supported journalism students with technical resources"
+    - "Upgraded and maintained newspaper website backend systems"
+  technologies:
+    - "OS X Server"
+    - "Web Publishing"
+    - "Lab Management"

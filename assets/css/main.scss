@@ -1,0 +1,22 @@
+---
+# Front matter required for Jekyll to process
+---
+
+// Main stylesheet
+// Imports all SCSS partials
+
+// Base styles
+@import 'base/variables';
+@import 'base/reset';
+@import 'base/utilities';
+
+// Layout
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/section';
+
+// Components
+@import 'components/index';
+
+// Themes
+@import 'themes/dark-mode';

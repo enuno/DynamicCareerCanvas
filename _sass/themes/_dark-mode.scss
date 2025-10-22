@@ -1,0 +1,17 @@
+// Dark mode specific styles
+// Note: Main dark mode colors are defined in _variables.scss using [data-theme="dark"]
+
+// This file is for any additional dark mode specific styling beyond color variables
+
+[data-theme="dark"] {
+  // Adjust image brightness if needed
+  img {
+    opacity: 0.9;
+  }
+
+  // Adjust code blocks
+  code,
+  pre {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}

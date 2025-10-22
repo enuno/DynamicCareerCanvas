@@ -1,0 +1,42 @@
+<!-- Component: Experience Card
+     Displays a single work experience entry
+     Usage: {% include components/experience-card.html experience=exp %} -->
+
+<article class="experience-card">
+  <div class="card__header">
+    <h3 class="card__title">{{ include.experience.title }}</h3>
+    <p class="card__subtitle">{{ include.experience.company }}</p>
+  </div>
+
+  <div class="experience-card__meta">
+    <time class="experience-card__dates">
+      {{ include.experience.start_date | date: "%b %Y" }} -
+      {% if include.experience.current %}
+        <span class="badge badge--success">Current</span>
+      {% else %}
+        {{ include.experience.end_date | date: "%b %Y" }}
+      {% endif %}
+    </time>
+    <span class="experience-card__location">{{ include.experience.location }}</span>
+  </div>
+
+  <div class="card__body">
+    {{ include.experience.description | markdownify }}
+
+    {% if include.experience.highlights %}
+    <ul class="experience-card__highlights">
+      {% for highlight in include.experience.highlights %}
+      <li>{{ highlight }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+
+  {% if include.experience.technologies %}
+  <div class="experience-card__technologies badge-group">
+    {% for tech in include.experience.technologies %}
+    <span class="badge">{{ tech }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+</article>

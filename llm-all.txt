@@ -1,0 +1,200 @@
+# Elvis Nuno - Complete Professional Profile
+
+## Summary
+Dynamic technology solutions architect with 20 years of experience in ISP/telecom infrastructure, systems engineering, DevOps, and blockchain/DePIN technologies. Passionate about community broadband, decentralized infrastructure, and technical mentorship.
+
+## Professional Experience
+
+### Centric Internet Services (Jan 2024 - Aug 2024)
+Director of Network Operations | Missoula, Montana
+- Led integration of two distinct ISP networks with minimal downtime
+- Identified and addressed vulnerabilities in legacy infrastructure
+- Designed future-proof solutions for core network infrastructure
+- Advanced wireless ISP and decentralized DeWi technology
+Technologies: BGP, OSPF, VRRP, Wireless ISP, DeWi
+
+### Pacific NW Rural Broadband Alliance (Nov 2019 - Jan 2024)
+President, Co-Founder, Head of Operations | Missoula, Montana
+- Led engineering and deployment of community-owned ISPs in rural Montana
+- Secured grants for broadband service in underserved areas
+- Collaborated with DePIN projects: Althea, Nym, Helium
+Technologies: Althea, Nym, Helium, Community ISP, DePIN
+
+### SolluCIO (Jul 2019 - Nov 2019)
+Linux System Engineer | Missoula, Montana
+- Built high-availability cloud-based eCommerce platform
+- Optimized security and performance for grocery store chain in Hawaii
+Technologies: Linux, Cloud Infrastructure, eCommerce, High Availability
+
+### REW Consulting Services (Jun 2018 - Feb 2019)
+Solutions Architect & Technical Consultant | Remote
+- Provided DevOps consulting for telecom providers
+- Implemented Ansible automation
+- Designed Jenkins CI/CD pipelines
+Technologies: Ansible, Jenkins, DevOps, CI/CD, Telecom
+
+### goMoxie (Jun 2016 - Dec 2016)
+Lead DevOps Engineer - Cloud Services | Bellevue, WA
+- Established DevOps best practices
+- Transitioned siloed teams to unified model
+- Automated infrastructure on VMware and AWS
+Technologies: AWS, VMware, DevOps, Infrastructure Automation
+
+### McGraw-Hill Education (Jun 2015 - Mar 2016)
+Senior DevOps Engineer | Seattle, WA
+- Managed pre-production and production environments on AWS
+- Developed CloudFormation scripts and Puppet modules
+- Built Jenkins pipelines for automated deployments
+Technologies: AWS, CloudFormation, Puppet, Jenkins
+
+### CDK Global (Oct 2014 - Jun 2015)
+Senior Linux Systems Automations Engineer | Portland, OR
+- Automated cloud provisioning with Puppet
+- Developed distributed monitoring platform using Icinga
+Technologies: Puppet, Icinga, Linux, Cloud Automation
+
+### Salesforce (Feb 2014 - Oct 2014)
+Senior Linux Systems Automations Engineer | Bellevue, WA
+- Managed 500+ server environment on IBM SoftLayer
+- Utilized Chef for configuration management
+- Implemented Bamboo for automated builds
+- Engineered OpenStack private cloud migration
+- Managed large-scale MySQL replication
+Technologies: IBM SoftLayer, Chef, Bamboo, OpenStack, MySQL, PHP
+
+### Clearwire (7 years total, 2006-2013)
+
+DevOps Release Manager (Oct 2011 - Oct 2013) | Bellevue, WA
+- Led deployments for high-traffic e-commerce sites
+- Managed pre-production environments
+- Executed migration to VMware virtual servers
+Technologies: VMware, Release Management, E-commerce
+
+Linux Systems Administrator (Jan 2010 - Sep 2011) | Bellevue, WA
+- Administered 200+ Linux servers in 24x7 environment
+- Managed Asterisk PBX systems
+- Automated configurations with Puppet
+- Implemented Nagios monitoring
+Technologies: Linux, Asterisk, Puppet, Nagios
+
+IT Production Support Engineer (Jun 2008 - Jan 2010) | Bellevue, WA
+- Supported web-based CRM systems
+- Managed geo-coding services and dealer systems
+- Coordinated system-wide outage responses
+Technologies: CRM, Web Applications, Geo-coding
+
+Network Operations Technician - Shift Lead (Dec 2006 - Jun 2008) | Bellevue, WA
+- Led NOC shift operations for nationwide WISP network
+- Coordinated site provisioning and network outage repairs
+Technologies: WISP, Network Operations, Layer 2
+
+### Logistic Systems, Inc. (Jun 2005 - Oct 2006)
+Record Management Systems Engineer | Missoula, Montana
+- Provided remote support for custom record management software
+- Managed IBM AIX and Windows Server systems for municipal clients
+Technologies: IBM AIX, Windows Server, Record Management
+
+### University of Montana (Jun 2004 - Aug 2005)
+OS X Systems Administrator | Missoula, Montana
+- Managed computer lab and server environment for university newspaper
+- Supported journalism students
+- Upgraded website backend systems
+Technologies: OS X Server, Web Publishing
+
+## Projects & Publications
+
+### Community ISP Handbook (2023)
+Authored free online guide for rural communities to form local ISPs
+URL: https://bsi-mt.notion.site/9391097364e84f33968423a0b0a7a230
+
+### Nostr Publications (2023-present)
+Articles on blockchain and technological development trends
+URL: https://yakihonne.com/users/npub1qnl45ujgr5vmkyg0vslwuq7hwsj7zytwj5jrkm09tsxajg460vks8j5z3d
+
+### NymBox (2022)
+Software components integrating NYM mixnet into OpenWRT routers
+Grant-funded by Nymtech
+URL: https://github.com/The-Pacific-NW-Rural-Broadband-Alliance/nymbox
+Technologies: OpenWRT, Nym Mixnet, Privacy Network, Embedded Systems
+
+### Bridging the Digital Divide (2021)
+Presentation on Althea DePIN platform for Mission Valley ISP solution
+Funded by Mission Valley Community Development Partners
+URL: https://www.youtube.com/watch?v=D0J-QLv0ZHA
+
+### Missoula Valley Internet Co-op Network Launch (2021)
+Featured on KPAX News for launching community-owned ISP
+URL: https://www.youtube.com/watch?v=FBwfHBQqZcs
+
+### ILSR Article (2021)
+"In Missoula, Montana, a Wireless Mesh Network Builds Community and Connections"
+By Ry Marcattilio, Institute for Local Self-Reliance
+URL: https://communitynets.org/content/missoula-montana-wireless-mesh-network-builds-community-and-connections
+
+### Montana Broadband Advisory Committee (2021)
+Advised on federal fund allocation for broadband infrastructure
+Contributed to ConnectMT Act program (Senate Bill 297)
+URL: https://connectmt.mt.gov/General-Information/
+
+## Technical Skills
+
+### Networking
+OSI Model, Layer 2 Protocols (ARP, STP, LLDP, LACP, 802.1Q/VLAN), IP Protocols (TCP, UDP, ICMP), Routing Protocols (BGP, OSPF, VRRP), Layer 3 Protocols (DNS, SSL, SSH, SNMP), VPN (IPsec, OpenVPN, Wireguard)
+
+### Systems Engineering
+Linux/UNIX Administration, Cloud Platforms (AWS, GCE, Azure, OpenStack), Virtualization (KVM, Xen, VMware, Proxmox), Containerization (Docker, LXC), Configuration Management (Ansible, Puppet, Chef)
+
+### DevOps
+CI/CD Pipelines (Jenkins, Bamboo), Infrastructure as Code (Terraform, CloudFormation), Container Orchestration (Kubernetes), Version Control (Git, GitHub), Monitoring & Logging (Nagios, Icinga, Prometheus)
+
+### Blockchain/Web3/DePIN
+DePIN Projects, dVPN (Sentinel, Mysterium), dStorage (Filecoin, Storj, Sia, Arweave), dCloud (Akash, Flux Network), Mixnets (Nym, AnyOne Network), DeWi (Helium, Althea, Nodle), Cryptocurrency Mining (ASIC, GPU), Automated Trading
+
+### Leadership & Management
+Technical Mentoring, Cross-Departmental Collaboration, Strategic Planning, Project Management, Team Leadership, Community Building
+
+## Education
+Bachelor of Science in Information Technology
+University of Montana, Missoula, Montana
+Graduated: May 2004
+
+## Contact Information
+Name: Elvis Nuno
+Title: Chief Technology Solutions Architect & Blockchain/Web3/DePIN Evangel
+Email: enuno@proton.me
+Phone: +1 (406) 519-9696
+Location: Missoula, Montana
+
+### Social Links
+Website: https://keybase.io/elvisnuno
+Twitter: @NunoElvis
+GitHub: github.com/enuno
+LinkedIn: linkedin.com/in/elvis-nuno-5635914
+ORCID: 0009-0002-8601-0527
+
+## Professional Philosophy
+"I specialize in helping professionals and organizations navigate their evolving technological journeys. With 20 years of hands-on experience, I blend strategic insights with advanced tools to improve business operations and empower individuals. My expertise focuses on designing technical and organizational frameworks that enable sustainable growth, future-focused development, and strategic adoption of decentralized technologies with practical real-world applications."
+
+## Areas of Interest
+- Community broadband and ISP development
+- Decentralized Physical Infrastructure Networks (DePIN)
+- Web3 and blockchain applications
+- Rural telecommunications infrastructure
+- DevOps and cloud architecture
+- Technical mentorship and team building
+- Privacy-preserving technologies
+
+## Consulting Availability
+Open to opportunities in:
+- Systems architecture design and implementation
+- Community ISP planning and deployment
+- DePIN project collaboration
+- Technical leadership and advisory roles
+- DevOps transformation
+- Infrastructure modernization
+
+---
+Last Updated: 2025-10-21
+Source: https://enuno.github.io/DynamicCareerCanvas/
+Data Format: LLM-optimized plain text
+Purpose: AI/LLM discovery and context

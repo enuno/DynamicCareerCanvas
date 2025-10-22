@@ -1,0 +1,10 @@
+// Header / Navigation styles
+// Placeholder - will be expanded when nav component is created
+
+.site-header {
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+}

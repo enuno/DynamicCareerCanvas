@@ -1,0 +1,64 @@
+# Windsurf Rules - Quick Reference
+
+# Full docs: WINDSURF.md, AGENTS.md
+
+## Project
+DynamicCareerCanvas - Jekyll portfolio site
+
+## Stack
+Jekyll, Liquid, YAML, SCSS, Vanilla JS
+
+## Core Rules
+
+NO frameworks (React, Vue, jQuery)
+Content in YAML (_data/)
+Use CSS variables
+Mobile-first responsive
+Support light/dark modes
+Test: bundle exec jekyll build
+
+## File Structure
+_data/ - YAML content
+_includes/ - Templates
+_layouts/ - Page layouts
+_sass/ - Styles
+assets/ - Static files
+
+## Code Patterns
+
+YAML:
+company: "Name"
+start_date: "YYYY-MM"
+
+HTML/Liquid:
+<div class="component-name">
+  {{ include.data.field }}
+</div>
+
+SCSS:
+.component {
+  var(--spacing-md);
+
+  @media (max-width: 768px) {}
+}
+
+JavaScript:
+const fn = () => {};
+// ES6+, no frameworks
+
+## Windsurf Features
+Flow Mode - Autonomous coding
+Cascade - Multi-file edits
+@workspace - Project queries
+@file - File references
+
+## Testing
+bundle exec jekyll build
+bundle exec jekyll serve --livereload
+
+## Attribution
+AI-Assisted: Windsurf IDE
+Co-Authored-By: Windsurf AI
+
+## More Info
+WINDSURF.md, AGENTS.md, .ai/CONTEXT.md

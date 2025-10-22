@@ -1,0 +1,30 @@
+// Project Card Component
+
+.project-card {
+  @extend .card;
+
+  &__type {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--color-accent);
+    color: var(--color-surface);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    text-transform: uppercase;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin-top: var(--spacing-md);
+    color: var(--color-accent);
+    font-weight: var(--font-weight-medium);
+  }
+
+  &--featured {
+    border: 2px solid var(--color-accent);
+  }
+}

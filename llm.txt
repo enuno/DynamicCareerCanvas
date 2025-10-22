@@ -1,0 +1,49 @@
+# Elvis Nuno - Professional Portfolio
+
+## About
+Elvis Nuno is a Chief Technology Solutions Architect with 20 years of experience in systems engineering, DevOps, and blockchain/DePIN technologies.
+
+## Expertise
+- Systems Architecture & Engineering
+- ISP & Telecom Infrastructure
+- DevOps & Cloud Platforms (AWS, Azure, OpenStack)
+- Blockchain, Web3, & DePIN Technologies
+- Community ISP Development
+- Technical Leadership & Mentoring
+
+## Contact
+- Email: enuno@proton.me
+- Phone: +1 (406) 519-9696
+- Location: Missoula, Montana
+- Website: https://keybase.io/elvisnuno
+- GitHub: https://github.com/enuno
+- LinkedIn: https://linkedin.com/in/elvis-nuno-5635914
+
+## Recent Work
+- Director of Network Operations at Centric Internet Services (2024)
+- President & Co-Founder of Pacific NW Rural Broadband Alliance (2019-2024)
+- Community ISP development and deployment
+- DePIN project collaboration (Althea, Nym, Helium)
+
+## Notable Projects
+- Community ISP Handbook (open-source guide for rural ISPs)
+- NymBox (privacy network integration for OpenWRT routers)
+- Missoula Valley Internet Co-op (community-owned ISP)
+- Montana Broadband Advisory Committee member
+
+## Technical Skills
+Networking, Linux/UNIX, Cloud Platforms, DevOps, CI/CD, Blockchain, DePIN, dVPN, dStorage, DeWi, Configuration Management, Container Orchestration
+
+## Education
+Bachelor of Science in Information Technology, University of Montana (2004)
+
+## Availability
+Open to consulting and collaboration opportunities in:
+- Systems architecture and infrastructure
+- Community ISP development
+- DePIN and Web3 projects
+- Technical leadership roles
+
+---
+Last Updated: 2025-10-21
+Source: https://enuno.github.io/DynamicCareerCanvas/

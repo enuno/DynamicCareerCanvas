@@ -1,0 +1,29 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer">
+      <div class="footer__content">
+        <p>{{ site.data.site.footer.copyright }}</p>
+
+        {% if site.data.profile.social %}
+        <div class="footer__social">
+          {% if site.data.profile.social.github %}
+          <a href="https://github.com/{{ site.data.profile.social.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+          {% endif %}
+          {% if site.data.profile.social.linkedin %}
+          <a href="https://linkedin.com/in/{{ site.data.profile.social.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+          {% endif %}
+          {% if site.data.profile.social.twitter %}
+          <a href="https://twitter.com/{{ site.data.profile.social.twitter }}" target="_blank" rel="noopener noreferrer" aria-label="Twitter">Twitter</a>
+          {% endif %}
+        </div>
+        {% endif %}
+
+        {% if site.data.site.footer.build_info %}
+        <p class="footer__build-info">
+          Built with Jekyll • Deployed via GitHub Pages
+        </p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</footer>

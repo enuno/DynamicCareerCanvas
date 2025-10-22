@@ -1,0 +1,33 @@
+<!-- Component: Project Card
+     Displays a single project entry
+     Usage: {% include components/project-card.html project=proj %} -->
+
+<article class="project-card {% if include.project.featured %}project-card--featured{% endif %}">
+  <div class="card__header">
+    <span class="project-card__type">{{ include.project.type }}</span>
+    <h3 class="card__title">{{ include.project.name }}</h3>
+    {% if include.project.year %}
+    <p class="card__subtitle">{{ include.project.year }}</p>
+    {% endif %}
+  </div>
+
+  <div class="card__body">
+    <p>{{ include.project.description }}</p>
+  </div>
+
+  {% if include.project.technologies %}
+  <div class="badge-group">
+    {% for tech in include.project.technologies %}
+    <span class="badge">{{ tech }}</span>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if include.project.url %}
+  <div class="card__footer">
+    <a href="{{ include.project.url }}" target="_blank" rel="noopener noreferrer" class="project-card__link">
+      View Project →
+    </a>
+  </div>
+  {% endif %}
+</article>

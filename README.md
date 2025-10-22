@@ -1,52 +1,275 @@
-# 🚀 Dynamic Resume Builder
+# DynamicCareerCanvas
 
-Welcome to my **Dynamic Resume Builder**! This project leverages the power of **GitHub**, **GitHub Actions**, **Jekyll**, and **GitHub Pages** to automatically generate and host my resume. With each update to my resume source file, the system automatically rebuilds and redeploys the site—keeping my resume fresh and always up-to-date.
+[![Jekyll](https://img.shields.io/badge/Jekyll-4.x-red.svg)](https://jekyllrb.com/)
+[![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-blue.svg)](https://pages.github.com/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
+Professional portfolio website for Elvis Nuno, showcasing 20 years of experience in systems architecture, DevOps, and blockchain/DePIN technologies.
 
 ## 🌟 Features
 
-- **Automated Deployment:** No more manual uploads or deployments. Every change you make is automatically reflected on the live site.
-- **Markdown Simplicity:** Edit your resume using Markdown—a simple and easy-to-read format.
-- **Always Live:** Hosted on GitHub Pages, ensuring your resume is always accessible online.
-- **Version Control:** Track your career progress over time with Git's version history.
+- **Data-Driven**: All content in YAML files - easy to edit
+- **Modern Design**: Clean, professional, responsive
+- **Dark Mode**: Built-in light/dark theme support
+- **AI-Friendly**: Comprehensive documentation for AI coding assistants
+- **Accessible**: WCAG AA compliant
+- **Fast**: Static site, optimized performance
+- **SEO Optimized**: Sitemap, robots.txt, structured data
+- **LLM Discovery**: llm.txt and llm-all.txt for AI crawlers
 
-## 🛠️ Technology Stack
+## 🚀 Quick Start
 
-- **[Jekyll](https://jekyllrb.com/):** Static site generator that converts Markdown into a beautiful, responsive HTML resume.
-- **[GitHub Actions](https://github.com/features/actions):** Automates the build and deployment process, triggered on every push to the main branch.
-- **[GitHub Pages](https://pages.github.com/):** Hosts the generated site, making it accessible at `https://yourusername.github.io/resume/`.
-- **[Modern-Resume-Theme](https://github.com/sproogen/modern-resume-theme):** A modern simple static resume template and theme.
+### Prerequisites
+
+- Ruby 3.1+
+- Bundler
+
+### Local Development
+
+```bash
+# Install dependencies
+bundle install
+
+# Serve with live reload
+./scripts/serve-local.sh
+# or
+bundle exec jekyll serve --livereload
+
+# Build site
+./scripts/build-local.sh
+# or
+bundle exec jekyll build
+```
+
+Visit http://localhost:4000
 
 ## 📂 Project Structure
 
-Here's a quick overview of the key files and directories in this repository:
+```
+DynamicCareerCanvas/
+├── _data/              # Content (YAML files)
+│   ├── experience.yml  # Work experience
+│   ├── projects.yml    # Projects & publications
+│   ├── skills.yml      # Technical skills
+│   ├── profile.yml     # Personal info
+│   └── site.yml        # Site configuration
+├── _includes/          # Reusable templates
+│   ├── components/     # UI components
+│   ├── head.html
+│   ├── header.html
+│   └── footer.html
+├── _layouts/           # Page layouts
+│   ├── default.html
+│   ├── home.html
+│   └── page.html
+├── _sass/              # Styles (SCSS)
+│   ├── base/           # Variables, reset, utilities
+│   ├── components/     # Component styles
+│   ├── layout/         # Layout styles
+│   └── themes/         # Theme definitions
+├── assets/             # Static files
+│   ├── css/
+│   ├── js/
+│   └── images/
+├── scripts/            # Utility scripts
+│   ├── build-local.sh
+│   ├── serve-local.sh
+│   ├── validate-yaml.sh
+│   └── new-experience.sh
+├── .ai/                # AI assistant documentation
+│   ├── CONTEXT.md
+│   ├── CONVENTIONS.md
+│   ├── PROMPTS.md
+│   └── CHANGELOG_AI.md
+├── docs/               # Project documentation
+├── AGENTS.md           # Universal AI agent rules
+├── CLAUDE.md           # Claude-specific config
+├── CURSOR.md           # Cursor-specific config
+├── COPILOT.md          # Copilot-specific config
+├── sitemap.xml         # SEO sitemap
+├── robots.txt          # Crawler instructions
+├── llm.txt             # LLM discovery (summary)
+└── llm-all.txt         # LLM discovery (complete)
+```
 
-- `resume.md`: The source file for my resume, written in Markdown.
-- `_config.yml`: Jekyll configuration file—customizes the site’s title, theme, and more.
-- `_layouts/default.html`: The HTML template that structures the resume content.
-- `.github/workflows/jekyll.yml`: GitHub Actions workflow that automates the build and deploy process.
+## 📝 Editing Content
 
-## 🚀 Getting Started
+### Adding Work Experience
 
-If you'd like to set up a similar system for your own resume, follow these steps:
+Edit `_data/experience.yml`:
 
-1. **Fork this repository** to your own GitHub account.
-2. **Customize the `resume.md` file** with your own information.
-3. **Push your changes**—GitHub Actions will automatically rebuild and deploy your resume.
-4. **Check out your live resume** at `https://yourusername.github.io/resume/`.
+```yaml
+- company: "Company Name"
+  title: "Job Title"
+  location: "City, State"
+  start_date: "2024-01"
+  end_date: "2024-08"  # or null if current
+  current: false
+  description: |
+    Your description here
+  highlights:
+    - "Achievement 1"
+    - "Achievement 2"
+  technologies:
+    - "Tech 1"
+    - "Tech 2"
+```
 
-## 🤖 How It Works
+Or use the helper script:
+```bash
+./scripts/new-experience.sh
+```
 
-1. **Edit**: Make changes to the `resume.md` file.
-2. **Push**: Push the changes to the `main` branch.
-3. **Automate**: GitHub Actions kicks in, building the Jekyll site and deploying it to GitHub Pages.
-4. **View**: Your updated resume is live and accessible online!
+### Adding Projects
 
-## 📄 License
+Edit `_data/projects.yml`:
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+```yaml
+- name: "Project Name"
+  type: "project"  # project, publication, presentation, media, advisory
+  featured: true
+  year: 2024
+  status: "completed"
+  description: "Project description"
+  url: "https://..."
+  technologies:
+    - "Tech 1"
+```
+
+### Updating Skills
+
+Edit `_data/skills.yml` - organized by category.
+
+### Personal Info
+
+Edit `_data/profile.yml` for bio, contact info, social links.
+
+## 🎨 Customization
+
+### Colors
+
+Edit `_sass/base/_variables.scss`:
+
+```scss
+:root {
+  --color-primary: #2c3e50;
+  --color-accent: #3498db;
+  // ... more variables
+}
+```
+
+### Components
+
+Create new components in `_includes/components/` and add styles in `_sass/components/`.
+
+## 🤖 AI Assistant Support
+
+This project is optimized for AI coding assistants:
+
+- **AGENTS.md** - Universal rules for all AI agents
+- **CLAUDE.md** - Claude Code specific
+- **CURSOR.md** - Cursor IDE specific
+- **COPILOT.md** - GitHub Copilot specific
+- **GEMINI.md** - Google Gemini specific
+- **CLINERULES.md** - Cline specific
+- **.ai/** directory - Detailed AI context and conventions
+
+### Using AI Assistants
+
+1. AI reads `AGENTS.md` and tool-specific file
+2. Reviews `.ai/CONTEXT.md` for project details
+3. Follows `.ai/CONVENTIONS.md` for code style
+4. Uses `.ai/PROMPTS.md` for common tasks
+
+## 🔧 Utility Scripts
+
+```bash
+# Build site
+./scripts/build-local.sh
+
+# Serve with live reload
+./scripts/serve-local.sh
+
+# Validate YAML files
+./scripts/validate-yaml.sh
+
+# Generate experience entry template
+./scripts/new-experience.sh
+```
+
+## 🚢 Deployment
+
+Automated via GitHub Actions:
+
+1. Push to `main` branch
+2. GitHub Actions builds Jekyll site
+3. Deploys to GitHub Pages
+4. Live in ~2 minutes
+
+## 📊 SEO & Discovery
+
+- **sitemap.xml** - Search engine sitemap
+- **robots.txt** - Crawler instructions
+- **llm.txt** - Summary for AI/LLM crawlers
+- **llm-all.txt** - Complete profile for AI/LLM crawlers
+
+## 🔍 Testing
+
+```bash
+# Build test
+bundle exec jekyll build
+
+# Check for errors
+bundle exec jekyll build --verbose
+
+# Serve locally
+bundle exec jekyll serve --livereload
+```
+
+Check:
+- ✅ Builds without errors
+- ✅ Looks good in browser
+- ✅ Mobile responsive (resize to ~375px)
+- ✅ Dark mode works
+- ✅ Links function
+- ✅ Images load
+
+## 📄 Documentation
+
+- **DEVELOPMENT_PLAN.md** - Overall project roadmap
+- **CODE_DEVELOPMENT_PLAN.md** - Coding guidelines
+- **CONTRIBUTING.md** - How to contribute
+- **DESIGNSYSTEM.md** - Visual design standards
+- **SECURITY.md** - Security policies
+
+## 🤝 Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+This is primarily a personal project, but suggestions and improvements are welcome!
+
+## 📜 License
+
+MIT License - see [LICENSE](LICENSE) file.
+
+## 🙏 Acknowledgments
+
+- Built with [Jekyll](https://jekyllrb.com/)
+- Hosted on [GitHub Pages](https://pages.github.com/)
+- Developed with AI assistance from Claude Code
+
+## 📬 Contact
+
+**Elvis Nuno**
+- Email: enuno@proton.me
+- Phone: +1 (406) 519-9696
+- LinkedIn: [elvis-nuno-5635914](https://linkedin.com/in/elvis-nuno-5635914)
+- GitHub: [@enuno](https://github.com/enuno)
 
 ---
 
-Feel free to explore, fork, and customize this project to suit your own needs. If you have any questions or suggestions, don't hesitate to open an issue or reach out!
+**Last Updated**: 2025-10-21
+**Version**: 2.0
+**Status**: Active Development
 
-Happy coding! ✨
+Built with ❤️ using Jekyll, GitHub Pages, and AI collaboration

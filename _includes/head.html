@@ -1,0 +1,34 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.data.profile.name }}</title>
+
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.data.site.description }}{% endif %}">
+  <meta name="keywords" content="{{ site.data.site.keywords }}">
+  <meta name="author" content="{{ site.data.profile.name }}">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {% endif %}{{ site.data.profile.name }}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.data.site.description }}{% endif %}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+
+  <!-- Favicon -->
+  {% if site.favicon %}
+  <link rel="icon" type="image/x-icon" href="{{ site.favicon | relative_url }}">
+  {% endif %}
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+  <!-- Preload fonts if needed -->
+
+  <!-- Theme -->
+  <script>
+    // Set theme before page loads to prevent flash
+    const theme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', theme);
+  </script>
+</head>

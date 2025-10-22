@@ -1,0 +1,47 @@
+# Technical Skills
+# Organized by category
+
+- category: "Networking"
+  skills:
+    - "OSI Model"
+    - "Layer 2 Protocols (ARP, STP, LLDP, LACP, 802.1Q/VLAN)"
+    - "IP Protocols (TCP, UDP, ICMP)"
+    - "Routing Protocols (BGP, OSPF, VRRP)"
+    - "Layer 3 Protocols (DNS, SSL, SSH, SNMP)"
+    - "VPN (IPsec, OpenVPN, Wireguard)"
+
+- category: "Systems Engineering"
+  skills:
+    - "Linux/UNIX Administration"
+    - "Cloud Platforms (AWS, GCE, Azure, OpenStack)"
+    - "Virtualization (KVM, Xen, VMware, Proxmox)"
+    - "Containerization (Docker, LXC)"
+    - "Configuration Management (Ansible, Puppet, Chef)"
+
+- category: "DevOps"
+  skills:
+    - "CI/CD Pipelines (Jenkins, Bamboo)"
+    - "Infrastructure as Code (Terraform, CloudFormation)"
+    - "Container Orchestration (Kubernetes)"
+    - "Version Control (Git, GitHub)"
+    - "Monitoring & Logging (Nagios, Icinga, Prometheus)"
+
+- category: "Blockchain/Web3/DePIN"
+  skills:
+    - "DePIN Projects"
+    - "dVPN (Sentinel, Mysterium)"
+    - "dStorage (Filecoin, Storj, Sia, Arweave)"
+    - "dCloud (Akash, Flux Network)"
+    - "Mixnets (Nym, AnyOne Network)"
+    - "DeWi (Helium, Althea, Nodle)"
+    - "Cryptocurrency Mining (ASIC, GPU)"
+    - "Automated Trading"
+
+- category: "Leadership & Management"
+  skills:
+    - "Technical Mentoring"
+    - "Cross-Departmental Collaboration"
+    - "Strategic Planning"
+    - "Project Management"
+    - "Team Leadership"
+    - "Community Building"

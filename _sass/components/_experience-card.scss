@@ -1,0 +1,49 @@
+// Experience Card Component
+
+.experience-card {
+  @extend .card;
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+  }
+
+  &__dates {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+  }
+
+  &__highlights {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      position: relative;
+      padding-left: var(--spacing-lg);
+      margin-bottom: var(--spacing-sm);
+
+      &::before {
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: var(--color-accent);
+        font-weight: var(--font-weight-bold);
+      }
+    }
+  }
+
+  &__technologies {
+    margin-top: var(--spacing-md);
+  }
+}

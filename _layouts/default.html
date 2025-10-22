@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+  <a href="#main" class="skip-to-main">Skip to main content</a>
+
+  {% include header.html %}
+
+  <main id="main">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  <!-- Theme toggle script -->
+  <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
+
+  <!-- Navigation toggle script -->
+  <script src="{{ '/assets/js/nav-toggle.js' | relative_url }}"></script>
+</body>
+
+</html>
