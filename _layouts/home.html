@@ -35,7 +35,6 @@ layout: default
           <a href="#experience" class="button button--primary">View Experience</a>
           <a href="#projects" class="button button--secondary">See Projects</a>
           <a href="{{ '/assets/files/resume.pdf' | relative_url }}" class="button button--outline" target="_blank">📄 Download Resume</a>
-          <a href="https://cal.com/enuno" class="button button--outline" target="_blank" rel="noopener noreferrer">📅 Schedule a Meeting</a>
         </div>
       </div>
     </div>
@@ -119,6 +118,7 @@ layout: default
         {% if site.data.profile.email %}
         <a href="mailto:{{ site.data.profile.email }}" class="button">📧 Email Me</a>
         {% endif %}
+        <a href="https://cal.com/enuno" class="button button--secondary" target="_blank" rel="noopener noreferrer">📅 Schedule a Meeting</a>
         {% if site.data.profile.social.linkedin %}
         <a href="https://linkedin.com/in/{{ site.data.profile.social.linkedin }}" class="button button--secondary" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
         {% endif %}
