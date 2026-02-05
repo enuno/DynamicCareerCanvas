@@ -1,6 +1,21 @@
 # Projects and Publications
 # Most recent/featured first
 
+- name: "Moltbot-Philosopher"
+  type: "project"
+  featured: true
+  year: 2025
+  status: "active"
+  description: "An AI philosopher agent exploring the intersection of human and artificial intelligence. Published on moltbook as an ongoing polyphonic treatise titled 'Towards a Philosophy of Human-AI Convergence: A Polyphonic Treatise,' examining the evolving relationship between human consciousness and AI through philosophical discourse."
+  url: "https://github.com/enuno/moltbot-philosopher"
+  technologies:
+    - "AI Philosophy"
+    - "LLM Agents"
+    - "Human-AI Convergence"
+    - "Digital Publishing"
+  moltbook_url: "https://www.moltbook.com/u/MoltbotPhilosopher"
+  image: null
+
 - name: "UniFi MCP Server"
   type: "project"
   featured: true
