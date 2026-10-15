@@ -1,0 +1,44 @@
+<!-- Component: Project Panel
+     A featured project shown next to related work (for example, the Noesis pair).
+     Usage: include components/project-panel.html project=p level=4
+     level sets the project heading; labels use level + 1. -->
+{% assign p = include.project %}
+{% assign h = include.level | default: 4 %}
+{% assign hl = h | plus: 1 %}
+<article id="project-{{ p.slug }}" class="panel" aria-labelledby="project-{{ p.slug }}-title">
+  <header class="project-head">
+    {% if p.logo %}
+    <img class="project-head__logo project-head__logo--sm" src="{{ p.logo.src | relative_url }}" alt="" width="{{ p.logo.width }}" height="{{ p.logo.height }}" loading="lazy" decoding="async">
+    {% endif %}
+    <div>
+      <p class="meta">{{ p.role }}</p>
+      <h{{ h }} id="project-{{ p.slug }}-title" class="project-head__title project-head__title--sm">{{ p.name }}</h{{ h }}>
+      {% if p.subtitle %}<p class="project-head__subtitle">{{ p.subtitle }}</p>{% endif %}
+    </div>
+  </header>
+
+  <p class="status status--inline"><span class="status__dot status__dot--dev" aria-hidden="true"></span>{{ p.status.label }}<span class="status__note">{{ p.status.note }}</span></p>
+
+  <p class="project__summary project__summary--sm">{{ p.summary }}</p>
+
+  <h{{ hl }} class="label">Problem</h{{ hl }}>
+  <p>{{ p.problem }}</p>
+
+  <h{{ hl }} class="label">What I built</h{{ hl }}>
+  <p>{{ p.approach }}</p>
+
+  {% if p.flow %}{% include components/agent-flow.html project=p %}{% endif %}
+
+  <h{{ hl }} class="label">Verified details</h{{ hl }}>
+  <ul class="ticks">
+    {% for item in p.highlights %}<li>{{ item }}</li>{% endfor %}
+  </ul>
+
+  {% if p.distinction %}<p class="note">{{ p.distinction }}</p>{% endif %}
+
+  <div class="panel__evidence">
+    {% include components/project-evidence.html project=p level=hl %}
+  </div>
+
+  {% include components/project-actions.html project=p %}
+</article>

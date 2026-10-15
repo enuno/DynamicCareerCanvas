@@ -1,5 +1,6 @@
 # Projects and Publications
 # Most recent/featured first
+# The three lead open-source projects live in featured_projects.yml.
 
 - name: "Moltbot-Philosopher"
   type: "project"
@@ -14,22 +15,6 @@
     - "Human-AI Convergence"
     - "Digital Publishing"
   moltbook_url: "https://www.moltbook.com/u/MoltbotPhilosopher"
-  image: null
-
-- name: "UniFi MCP Server"
-  type: "project"
-  featured: true
-  year: 2024
-  status: "active"
-  description: "Model Context Protocol (MCP) server that exposes the UniFi Network Controller API, enabling AI agents and applications to interact with UniFi network infrastructure. Features comprehensive network management capabilities, Redis caching, webhook support, and production-grade security with 105+ unit tests."
-  url: "https://github.com/enuno/unifi-mcp-server"
-  technologies:
-    - "Python"
-    - "Model Context Protocol"
-    - "Docker"
-    - "UniFi API"
-    - "Redis"
-    - "AI Integration"
   image: null
 
 - name: "Ansible Akash Provider"

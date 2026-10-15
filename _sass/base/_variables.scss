@@ -1,145 +1,115 @@
-// Base Variables
-// Modern, vibrant color scheme with gradients
+// Design Tokens
+// Charcoal/slate foundations with a restrained teal accent.
+// Dark and light themes share one set of token names.
+// Theme order: system preference, unless the visitor picked a theme
+// (stored as data-theme on <html> by assets/js/theme-toggle.js).
 
-// Color Palette - Light Mode
+// SCSS breakpoints (mobile-first, use with min-width)
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;
+
+@mixin theme-light {
+  color-scheme: light;
+  --color-background: #f6f7f9;
+  --color-surface: #ffffff;
+  --color-surface-2: #eef1f4;
+  --color-border: #dde2e8;
+  --color-border-strong: #b9c2cd;
+  --color-text-primary: #121820;
+  --color-text-secondary: #44505d;
+  --color-text-muted: #5b6774;
+  --color-accent: #0d6d66;
+  --color-accent-hover: #0a5a54;
+  --color-accent-soft: rgba(13, 109, 102, 0.08);
+  --color-on-accent: #ffffff;
+  --color-grid: rgba(18, 24, 32, 0.07);
+  --color-header: rgba(246, 247, 249, 0.88);
+  --shadow-panel: 0 1px 0 rgba(18, 24, 32, 0.04), 0 8px 24px -16px rgba(18, 24, 32, 0.18);
+}
+
+@mixin theme-dark {
+  color-scheme: dark;
+  --color-background: #0e1216;
+  --color-surface: #141a20;
+  --color-surface-2: #1a2129;
+  --color-border: #26303a;
+  --color-border-strong: #3a4654;
+  --color-text-primary: #e7ebef;
+  --color-text-secondary: #aab4bf;
+  --color-text-muted: #8a95a2;
+  --color-accent: #4cc9b9;
+  --color-accent-hover: #74ddd0;
+  --color-accent-soft: rgba(76, 201, 185, 0.1);
+  --color-on-accent: #04201c;
+  --color-grid: rgba(231, 235, 239, 0.06);
+  --color-header: rgba(14, 18, 22, 0.86);
+  --shadow-panel: 0 1px 0 rgba(0, 0, 0, 0.3), 0 12px 32px -20px rgba(0, 0, 0, 0.8);
+}
+
 :root {
-  // Primary Colors - Vibrant blue-purple gradient
-  --color-primary: #667eea;
-  --color-primary-dark: #5568d3;
-  --color-primary-light: #818cf8;
-  --color-accent: #f59e0b;
-  --color-accent-dark: #d97706;
+  @include theme-dark;
 
-  // Gradient Colors
-  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  --gradient-accent: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
-  --gradient-success: linear-gradient(135deg, #10b981 0%, #059669 100%);
-  --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-  --gradient-card: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  // Aliases kept for existing docs and conventions
+  --color-primary: var(--color-accent);
+  --color-text: var(--color-text-primary);
 
-  // Background Colors
-  --color-background: #ffffff;
-  --color-surface: #f9fafb;
-  --color-surface-hover: #f3f4f6;
-
-  // Text Colors
-  --color-text: #1f2937;
-  --color-text-secondary: #6b7280;
-  --color-text-muted: #9ca3af;
-
-  // Border & Shadow
-  --color-border: #e5e7eb;
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --shadow-colored: 0 10px 40px rgba(102, 126, 234, 0.3);
-
-  // Glass Effect
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.18);
-
-  // Spacing
+  // Spacing (4px base)
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
   --spacing-2xl: 3rem;
-  --spacing-3xl: 4rem;
+  --spacing-3xl: 4.5rem;
+  // Fluid values live in custom properties: Ruby Sass (GitHub Pages)
+  // would try to evaluate clamp() arithmetic in ordinary properties.
+  --spacing-section: clamp(4rem, 3rem + 5vw, 7.5rem);
+  --spacing-hero: clamp(3rem, 2rem + 5vw, 6rem);
+  --gutter: 1rem;
 
-  // Typography
-  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  --font-family-heading: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  // Typography (system fonts: no external requests)
+  --font-sans: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --font-family-base: var(--font-sans);
+  --font-family-mono: var(--font-mono);
 
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
   --font-size-lg: 1.125rem;
   --font-size-xl: 1.25rem;
-  --font-size-2xl: 1.5rem;
-  --font-size-3xl: 1.875rem;
-  --font-size-4xl: 2.25rem;
-  --font-size-5xl: 3rem;
+  --font-size-2xl: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem);
+  --font-size-3xl: clamp(1.75rem, 1.4rem + 1.6vw, 2.5rem);
+  --font-size-display: clamp(2.75rem, 1.9rem + 4.2vw, 5rem);
 
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
+  --line-height-tight: 1.15;
+  --line-height-snug: 1.35;
+  --line-height-normal: 1.6;
 
-  --line-height-tight: 1.25;
-  --line-height-normal: 1.5;
-  --line-height-relaxed: 1.75;
+  --measure: 68ch;
+  --container: 1200px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --header-height: 4rem;
+  --transition: 160ms ease;
 
-  // Border Radius
-  --radius-sm: 0.375rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
-  --radius-2xl: 1.5rem;
-  --radius-full: 9999px;
-
-  // Transitions
-  --transition-fast: 150ms ease-in-out;
-  --transition-normal: 300ms ease-in-out;
-  --transition-slow: 500ms ease-in-out;
-
-  // Z-index
-  --z-dropdown: 1000;
-  --z-sticky: 1020;
-  --z-fixed: 1030;
-  --z-modal-backdrop: 1040;
-  --z-modal: 1050;
-  --z-popover: 1060;
-  --z-tooltip: 1070;
-
-  // Breakpoints (for JS)
-  --breakpoint-sm: 640px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
+  @media (min-width: $breakpoint-md) {
+    --gutter: 2rem;
+  }
 }
 
-// Dark Mode Colors
-[data-theme="dark"] {
-  // Primary Colors
-  --color-primary: #818cf8;
-  --color-primary-dark: #6366f1;
-  --color-primary-light: #a5b4fc;
-  --color-accent: #fbbf24;
-  --color-accent-dark: #f59e0b;
-
-  // Gradients
-  --gradient-primary: linear-gradient(135deg, #818cf8 0%, #a78bfa 100%);
-  --gradient-accent: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
-  --gradient-hero: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-  --gradient-card: linear-gradient(135deg, rgba(129, 140, 248, 0.1) 0%, rgba(167, 139, 250, 0.1) 100%);
-
-  // Background Colors
-  --color-background: #0f172a;
-  --color-surface: #1e293b;
-  --color-surface-hover: #334155;
-
-  // Text Colors
-  --color-text: #f1f5f9;
-  --color-text-secondary: #cbd5e1;
-  --color-text-muted: #94a3b8;
-
-  // Border & Shadow
-  --color-border: #334155;
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
-  --shadow-colored: 0 10px 40px rgba(129, 140, 248, 0.3);
-
-  // Glass Effect
-  --glass-bg: rgba(30, 41, 59, 0.7);
-  --glass-border: rgba(255, 255, 255, 0.1);
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    @include theme-light;
+  }
 }
 
-// SCSS Variables for use in calculations
-$breakpoint-sm: 640px;
-$breakpoint-md: 768px;
-$breakpoint-lg: 1024px;
-$breakpoint-xl: 1280px;
+:root[data-theme="light"] {
+  @include theme-light;
+}
+
+:root[data-theme="dark"] {
+  @include theme-dark;
+}

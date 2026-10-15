@@ -1,0 +1,37 @@
+// Contact Component
+// Label/value rows, like a specification table.
+
+.section--last {
+  padding-bottom: var(--spacing-section);
+}
+
+.contact {
+  max-width: 48rem;
+  margin: 0;
+
+  // Align with the section title column (section header is 3fr / 9fr)
+  @media (min-width: $breakpoint-lg) {
+    margin-left: calc((100% - var(--spacing-xl)) * 0.25 + var(--spacing-xl));
+  }
+
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--color-border);
+
+  &__row {
+    display: grid;
+    gap: 0.15rem var(--spacing-xl);
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--color-border);
+
+    @media (min-width: $breakpoint-sm) {
+      grid-template-columns: 8rem 1fr;
+      align-items: baseline;
+    }
+  }
+
+  &__value {
+    font-size: var(--font-size-lg);
+    overflow-wrap: anywhere;
+  }
+}

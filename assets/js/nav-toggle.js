@@ -1,56 +1,55 @@
 /**
  * Navigation Toggle
- * Handles mobile navigation menu
+ * Opens and closes the primary menu on narrow screens.
+ *
+ * The menu is a disclosure: the toggle button carries aria-expanded and
+ * aria-controls; the menu gets the .is-open class. Escape, a link click, or
+ * a click outside closes it. Escape returns focus to the toggle.
+ *
+ * Exported for tests (Node); runs automatically in the browser.
  */
-
-(function() {
+(function () {
   'use strict';
 
-  const navToggle = document.querySelector('.nav__toggle');
-  const navMenu = document.querySelector('.nav__menu');
+  /**
+   * Wire up the menu disclosure.
+   * @param {Element|null} toggle - the button that opens and closes the menu
+   * @param {Element|null} menu - the element that holds the links
+   * @param {Document|Element} doc - where global key and click events arrive
+   */
+  const initNav = (toggle, menu, doc) => {
+    if (!toggle || !menu) return;
 
-  if (!navToggle || !navMenu) return;
+    const isOpen = () => menu.classList.contains('is-open');
 
-  const toggleNav = () => {
-    const isOpen = navMenu.classList.contains('is-open');
+    const setOpen = (open) => {
+      menu.classList.toggle('is-open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
 
-    if (isOpen) {
-      navMenu.classList.remove('is-open');
-      navToggle.classList.remove('is-active');
-      navToggle.setAttribute('aria-expanded', 'false');
-    } else {
-      navMenu.classList.add('is-open');
-      navToggle.classList.add('is-active');
-      navToggle.setAttribute('aria-expanded', 'true');
-    }
-  };
+    toggle.addEventListener('click', () => setOpen(!isOpen()));
 
-  // Toggle on button click
-  navToggle.addEventListener('click', toggleNav);
+    menu.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => setOpen(false));
+    });
 
-  // Close on link click (mobile)
-  const navLinks = navMenu.querySelectorAll('.nav__link');
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (navMenu.classList.contains('is-open')) {
-        toggleNav();
+    doc.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && isOpen()) {
+        setOpen(false);
+        toggle.focus();
       }
     });
-  });
 
-  // Close on escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && navMenu.classList.contains('is-open')) {
-      toggleNav();
-    }
-  });
+    doc.addEventListener('click', (event) => {
+      if (isOpen() && !menu.contains(event.target) && !toggle.contains(event.target)) {
+        setOpen(false);
+      }
+    });
+  };
 
-  // Close when clicking outside
-  document.addEventListener('click', (e) => {
-    if (navMenu.classList.contains('is-open') &&
-        !navMenu.contains(e.target) &&
-        !navToggle.contains(e.target)) {
-      toggleNav();
-    }
-  });
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = { initNav };
+  } else {
+    initNav(document.querySelector('.nav__toggle'), document.getElementById('site-menu'), document);
+  }
 })();

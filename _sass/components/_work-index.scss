@@ -1,0 +1,49 @@
+// Work Index Component
+// A ruled list (not cards) of other projects, writing, and talks.
+
+.work-index {
+  &__list {
+    display: grid;
+    column-gap: var(--spacing-2xl);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-top: 1px solid var(--color-border);
+
+    @media (min-width: $breakpoint-lg) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__item {
+    display: grid;
+    gap: var(--spacing-xs);
+    align-content: start;
+    padding: var(--spacing-lg) 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  &__meta {
+    display: flex;
+    gap: var(--spacing-md);
+    margin: 0;
+    padding-top: 0.2rem;
+  }
+
+  &__name {
+    font-size: var(--font-size-lg);
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__desc {
+    max-width: var(--measure);
+    margin: var(--spacing-xs) 0 0;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+  }
+}

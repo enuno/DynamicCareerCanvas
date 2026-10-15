@@ -1,0 +1,81 @@
+<!-- Component: Flagship Project
+     The lead featured project with metrics, safety controls, and community.
+     Usage: include components/project-flagship.html project=p
+     Headings: project h3, labels h4. -->
+{% assign p = include.project %}
+{% include github-metrics.html project=p %}
+<article id="project-{{ p.slug }}" class="flagship" aria-labelledby="project-{{ p.slug }}-title">
+  <div class="flagship__main">
+    <header class="project-head">
+      {% if p.logo %}
+      <img class="project-head__logo" src="{{ p.logo.src | relative_url }}" alt="" width="{{ p.logo.width }}" height="{{ p.logo.height }}" loading="lazy" decoding="async">
+      {% endif %}
+      <div>
+        <p class="meta">Flagship · {{ p.role }}</p>
+        <h3 id="project-{{ p.slug }}-title" class="project-head__title">{{ p.name }}</h3>
+      </div>
+    </header>
+
+    <p class="project__summary">{{ p.summary }}</p>
+
+    <div class="project__cols">
+      <div>
+        <h4 class="label">Problem</h4>
+        <p>{{ p.problem }}</p>
+      </div>
+      <div>
+        <h4 class="label">What I built</h4>
+        <p>{{ p.approach }}</p>
+      </div>
+      <div>
+        <h4 class="label">Capabilities</h4>
+        <ul class="ticks">
+          {% for item in p.highlights %}<li>{{ item }}</li>{% endfor %}
+        </ul>
+      </div>
+      {% if p.safety %}
+      <div>
+        <h4 class="label">Safety controls</h4>
+        <ul class="ticks ticks--guard">
+          {% for item in p.safety %}<li>{{ item }}</li>{% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+
+    {% if p.community %}
+    <div class="callout">
+      <h4 class="label">Community</h4>
+      <p>{{ p.community }}</p>
+    </div>
+    {% endif %}
+
+    {% include components/project-actions.html project=p %}
+  </div>
+
+  <div class="flagship__aside">
+    <p class="status"><span class="status__dot" aria-hidden="true"></span>{{ p.status.label }}<span class="status__note">{{ p.status.note }}</span></p>
+    {% if gh_stars != "" %}
+    <dl class="stats">
+      <div class="stats__item stats__item--lead">
+        <dt>GitHub stars</dt>
+        <dd>{{ gh_stars }}</dd>
+      </div>
+      {% if gh_forks != "" %}
+      <div class="stats__item">
+        <dt>Forks</dt>
+        <dd>{{ gh_forks }}</dd>
+      </div>
+      {% endif %}
+      {% if gh_release != "" %}
+      <div class="stats__item">
+        <dt>Latest release</dt>
+        <dd>{{ gh_release }} <span class="stats__sub">{{ gh_release_date }}</span></dd>
+      </div>
+      {% endif %}
+    </dl>
+    <p class="stats__note">{{ gh_stars_note }}. Stars measure interest, not production use.</p>
+    {% endif %}
+    {% include components/project-evidence.html project=p level=4 %}
+  </div>
+</article>

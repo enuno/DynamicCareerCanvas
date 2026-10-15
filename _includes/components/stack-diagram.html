@@ -1,0 +1,24 @@
+<!-- Component: Stack Diagram
+     Conceptual hero figure: three layers of the work, top to bottom.
+     Data: site.data.profile.hero.layers. Links point to featured projects. -->
+<figure class="stack" aria-labelledby="stack-caption">
+  <figcaption id="stack-caption" class="stack__caption meta">How the work fits together</figcaption>
+  <ol class="stack__layers">
+    {% for layer in site.data.profile.hero.layers %}
+    <li class="stack__layer">
+      <span class="stack__tag meta">{{ layer.tag }}</span>
+      <span class="stack__name">{{ layer.name }}</span>
+      <span class="stack__items">{{ layer.items }}</span>
+      {% if layer.projects.size > 0 %}
+      <span class="stack__projects">
+        {% for slug in layer.projects %}
+        {% assign linked = site.data.featured_projects | where: "slug", slug | first %}
+        <a href="#project-{{ slug }}">{{ linked.name }}</a>
+        {% endfor %}
+      </span>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ol>
+  <p class="stack__note">Each layer runs on the one below it.</p>
+</figure>

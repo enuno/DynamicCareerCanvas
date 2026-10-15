@@ -1,10 +1,31 @@
 # Personal Profile Information
 
 name: "Elvis Nuno"
-title: "Technology Solutions Architect & Blockchain/Web3/DePIN Evangel"
+title: "Infrastructure & Systems Engineer · Open-Source Maintainer"
 email: ".profound075@slmail.me"
 phone: "+1 (406) 519-9696"
 location: "United States"
+
+# Hero
+hero:
+  eyebrow: "Infrastructure & systems engineer · Open-source maintainer"
+  headline: "Reproducible infrastructure for AI agents that work within clear limits."
+  intro: "I have spent twenty years on ISP and datacenter networks, Linux fleets, and the automation that keeps them consistent. Now I build open-source tools that let AI agents operate real infrastructure through typed interfaces, approval gates, and audit trails."
+  # Hero diagram, top to bottom. Each layer runs on the one below it.
+  # projects: slugs from featured_projects.yml
+  layers:
+    - tag: "L3"
+      name: "Governed AI agents"
+      items: "MCP tools · approval gates · audit trails"
+      projects: ["unifi-mcp-server", "noesis-agent-stack"]
+    - tag: "L2"
+      name: "Reproducible automation"
+      items: "Ansible · Terraform · Kubernetes · CI"
+      projects: ["noesis-ansible"]
+    - tag: "L1"
+      name: "Physical infrastructure"
+      items: "Fiber WAN · datacenter networks · wireless and RF"
+      projects: []
 
 # Social Links
 social:
@@ -13,16 +34,32 @@ social:
   github: "enuno"
   linkedin: "elvis-nuno-5635914"
   orcid: "0009-0002-8601-0527"
+  calendar: "https://cal.com/enuno"
 
 # About Section
 about:
-  title: "About Me"
-  image: "assets/images/profile/profile.png"
-  banner: "assets/images/profile/banner.jpg"
+  title: "About"
   bio: |
-    As a dynamic and innovative technology solutions architect, experienced systems engineer, and Blockchain, Web3, and DePIN evangelist, I specialize in helping professionals and organizations navigate their evolving technological journeys. With 20 years of hands-on experience in building and optimizing ISP and telecom infrastructure, I blend strategic insights with advanced tools to improve business operations and empower individuals in shaping their career paths with clarity and confidence. My expertise is largely focused in designing technical and organizational frameworks that enable sustainable growth, future-focused development, and the strategic adoption of decentralized technologies that demonstrate a strong value in practical real-world applications to improve and modernize critical infrastructure.
+    I started in 2006 on the shift desk of Clearwire's network operations center, which ran a nationwide wireless network. I spent the next decade running Linux fleets and building automation at Clearwire, Salesforce, CDK Global, McGraw-Hill Education, and goMoxie.
 
-    With a strong emphasis on adaptability, I guide businesses, teams, and individuals in harnessing their potential and seizing opportunities in a rapidly changing technological landscape. I am passionate about working with technical teams in solving complex challenges in telecommunications, DevOps, cloud, and distributed systems engineering while advancing blockchain, DePIN, and Web3 technologies to foster a more connected, secure, and decentralized world. Whether architecting resilient networks or mentoring the next generation of engineers, I approach every task with enthusiasm and a commitment to excellence, empowering individuals to define their unique value, build highly successful teams, and leave lasting professional legacies.
+    From 2019 to 2024 I co-founded and ran the Pacific NW Rural Broadband Alliance, a non-profit that engineered community-owned ISPs in rural Montana. I then directed network operations through an ISP merger at Centric Internet Services.
+
+    Today I design fiber WAN and datacenter networking at ServerDomes. I founded Ryno Crypto Services to develop modular, direct-to-chip liquid-cooled Bitcoin mining infrastructure powered by green energy. I also build open-source tools for AI agents that operate infrastructure.
+
+# Engineering principles (About section)
+principles:
+  - name: "Reproducible"
+    text: "If a system cannot be rebuilt from code and inventory, it is not finished. Configuration lives in Ansible, Terraform, and Helm, not in shell history."
+  - name: "Observable"
+    text: "Services expose metrics, health checks, and structured logs. An operator should not have to guess the current state of a system."
+  - name: "Least privilege"
+    text: "People and agents get the narrowest access that does the job. Risky actions need explicit confirmation, a dry run, or a human approval gate."
+  - name: "Maintainable"
+    text: "Plain tools, small modules, written conventions, and tests that run in CI. The next maintainer should not need me in the room."
+  - name: "Private by default"
+    text: "Self-host where it is practical and keep services local-first. This site has no analytics, trackers, or cookies."
+  - name: "Evidence over claims"
+    text: "A passing test suite is not a deployment, and a star count is not adoption. Report each status at the layer where it was verified."
 
 # References
 references:

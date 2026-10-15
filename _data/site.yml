@@ -2,32 +2,25 @@
 # Separate from Jekyll _config.yml for easier editing
 
 # Site Metadata
-title: "Elvis Nuno - Technology Solutions Architect"
-description: "Professional portfolio showcasing 20 years of experience in systems architecture, DevOps, and blockchain/DePIN technologies."
-keywords: "technology solutions architect, systems engineer, DevOps, blockchain, Web3, DePIN, ISP, telecom"
-
-# Features
-features:
-  dark_mode: true
-  animations: true
-  responsive: true
+title: "Elvis Nuno — Infrastructure & Systems Engineer"
+description: "Elvis Nuno is an infrastructure and systems engineer and open-source maintainer. He builds governed AI-agent tooling on two decades of ISP, datacenter, Linux, and automation work."
+keywords: "infrastructure engineer, systems engineer, MCP, Model Context Protocol, AI agents, agent governance, Ansible, network engineering, fiber WAN, DevOps, DePIN"
 
 # Navigation
 navigation:
-  - title: "Home"
-    url: "/"
-  - title: "About"
-    url: "/#about"
+  - title: "Work"
+    url: "/#work"
+  - title: "Expertise"
+    url: "/#expertise"
   - title: "Experience"
     url: "/#experience"
-  - title: "Projects"
-    url: "/#projects"
-  - title: "Skills"
-    url: "/#skills"
-  - title: "Resume"
-    url: "/resume"
+  - title: "About"
+    url: "/#about"
+  - title: "Contact"
+    url: "/#contact"
+  - title: "Résumé"
+    url: "/resume/"
 
 # Footer
 footer:
-  copyright: "© 2025 Elvis Nuno. All rights reserved."
-  build_info: true
+  note: "Built with Jekyll and served from GitHub Pages. No analytics, trackers, or cookies."

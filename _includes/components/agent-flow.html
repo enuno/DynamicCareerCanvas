@@ -1,0 +1,19 @@
+<!-- Component: Agent Flow
+     Conceptual diagram of how work moves through a governed agent system.
+     The ordered list is the diagram and its text equivalent.
+     Usage: include components/agent-flow.html project=p -->
+{% assign p = include.project %}
+<figure class="flow" aria-labelledby="flow-{{ p.slug }}-caption">
+  <ol class="flow__steps">
+    {% for s in p.flow %}
+    <li class="flow__step{% if s.gate %} flow__step--gate{% endif %}">
+      <span class="flow__num meta" aria-hidden="true">{{ forloop.index | prepend: "0" }}</span>
+      <span class="flow__name">{{ s.step }}{% if s.gate %}<span class="flow__badge meta">Checkpoint</span>{% endif %}</span>
+      <span class="flow__detail">{{ s.detail }}</span>
+    </li>
+    {% endfor %}
+  </ol>
+  <figcaption id="flow-{{ p.slug }}-caption" class="flow__caption">
+    Conceptual architecture, based on the repository README and WORKFLOWS.md. It is not a live dashboard.
+  </figcaption>
+</figure>

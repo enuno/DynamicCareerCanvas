@@ -1,0 +1,23 @@
+<!-- Component: Timeline Item
+     One role in the experience timeline.
+     Usage: include components/timeline-item.html job=job
+     Shows `summary` when present, otherwise `description`. Full highlights
+     are on the résumé page. -->
+{% assign job = include.job %}
+<li class="timeline__item">
+  <p class="timeline__dates meta">
+    {%- comment -%} Dates are "YYYY-MM"; append a day so Liquid can parse them. {%- endcomment -%}
+    <time datetime="{{ job.start_date }}">{{ job.start_date | append: "-01" | date: "%b %Y" }}</time>
+    <span aria-hidden="true">–</span><span class="sr-only">to</span>
+    {% if job.current %}Present{% else %}<time datetime="{{ job.end_date }}">{{ job.end_date | append: "-01" | date: "%b %Y" }}</time>{% endif %}
+  </p>
+  <div class="timeline__body">
+    <h3 class="timeline__role">{{ job.title }}</h3>
+    <p class="timeline__org">{{ job.company }}<span class="timeline__loc"> · {{ job.location }}</span></p>
+    {% if job.previous_title %}<p class="timeline__prev">Previously {{ job.previous_title }}</p>{% endif %}
+    <p class="timeline__summary">{{ job.summary | default: job.description | strip }}</p>
+    {% if job.technologies and include.compact != true %}
+    <p class="timeline__tech meta">{{ job.technologies | join: " · " }}</p>
+    {% endif %}
+  </div>
+</li>

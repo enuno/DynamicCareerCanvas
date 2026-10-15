@@ -1,0 +1,22 @@
+{
+  "repos": {
+    "enuno/noesis-agent-stack": {
+      "checked_at": "2026-10-15",
+      "forks": 1,
+      "stars": 0
+    },
+    "enuno/noesis-ansible": {
+      "checked_at": "2026-10-15",
+      "forks": 0,
+      "stars": 0
+    },
+    "enuno/unifi-mcp-server": {
+      "checked_at": "2026-10-15",
+      "forks": 55,
+      "latest_release": "v0.6.1",
+      "latest_release_date": "2026-10-14",
+      "stars": 290
+    }
+  },
+  "source": "snapshot"
+}

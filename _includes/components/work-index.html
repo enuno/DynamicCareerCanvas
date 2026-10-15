@@ -1,0 +1,19 @@
+<!-- Component: Work Index
+     Compact list of other projects, publications, talks, and media.
+     Data: site.data.projects (most recent first). -->
+<div class="work-index">
+  <div class="section__subhead">
+    <h3 id="more-title">More projects, writing, and community work</h3>
+  </div>
+  <ul class="work-index__list">
+    {% for item in site.data.projects %}
+    <li class="work-index__item">
+      <p class="work-index__meta meta"><span>{{ item.year }}</span> <span>{{ item.type }}</span></p>
+      <div>
+        <a class="work-index__name" href="{{ item.url }}" rel="noopener">{{ item.name }} <span aria-hidden="true">↗</span></a>
+        <p class="work-index__desc">{{ item.description }}</p>
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

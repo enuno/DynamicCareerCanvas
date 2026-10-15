@@ -1,27 +1,38 @@
+<!-- Site header: brand, primary navigation, GitHub link, theme and menu toggles.
+     Navigation items come from _data/site.yml. On narrow screens the menu
+     collapses behind the toggle (only when JavaScript is available). -->
 <header class="site-header">
-  <div class="container">
-    <nav class="nav">
-      <div class="nav__brand">
-        <a href="{{ '/' | relative_url }}" class="nav__logo">{{ site.data.profile.name }}</a>
-      </div>
+  <div class="container nav">
+    <a href="{{ '/' | relative_url }}" class="nav__brand">
+      <span class="nav__mark" aria-hidden="true">EN</span>
+      <span class="nav__name">{{ site.data.profile.name }}</span>
+    </a>
 
-      <ul class="nav__menu">
+    <nav class="nav__menu" id="site-menu" aria-label="Primary">
+      <ul class="nav__list">
         {% for item in site.data.site.navigation %}
-        <li class="nav__item">
-          <a href="{{ item.url | relative_url }}" class="nav__link">{{ item.title }}</a>
-        </li>
+        <li><a href="{{ item.url | relative_url }}" class="nav__link">{{ item.title }}</a></li>
         {% endfor %}
       </ul>
-
-      <button class="nav__toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-        <span class="theme-toggle__icon">🌙</span>
-      </button>
     </nav>
+
+    <div class="nav__actions">
+      {% if site.data.profile.social.github %}
+      <a class="icon-button" href="https://github.com/{{ site.data.profile.social.github }}" rel="noopener">
+        {% include icons/github.svg %}
+        <span class="sr-only">GitHub profile</span>
+      </a>
+      {% endif %}
+
+      <button class="icon-button" type="button" id="theme-toggle" aria-label="Switch color theme">
+        <span class="theme-icon theme-icon--sun">{% include icons/sun.svg %}</span>
+        <span class="theme-icon theme-icon--moon">{% include icons/moon.svg %}</span>
+      </button>
+
+      <button class="icon-button nav__toggle" type="button" aria-controls="site-menu" aria-expanded="false">
+        <span class="nav__toggle-bars" aria-hidden="true"></span>
+        <span class="sr-only">Menu</span>
+      </button>
+    </div>
   </div>
 </header>

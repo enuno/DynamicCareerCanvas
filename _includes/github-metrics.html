@@ -1,0 +1,33 @@
+{%- comment -%}
+  Resolve GitHub metrics for one featured project.
+  Usage: {% include github-metrics.html project=project %}
+  Sets (in the calling page): gh_stars, gh_stars_note, gh_forks, gh_release,
+  gh_release_date. Each is empty when unavailable, so callers can test it.
+
+  Order of precedence for stars:
+    1. the snapshot in _data/github_metrics.json (a refreshed value always
+       wins, even if it is below the owner-supplied baseline);
+    2. the owner-supplied baseline_stars floor, shown as "N+";
+    3. nothing (the star count is omitted).
+  Zero values are omitted so that new projects do not show empty badges.
+{%- endcomment -%}
+{%- assign gh_stars = "" -%}
+{%- assign gh_stars_note = "" -%}
+{%- assign gh_forks = "" -%}
+{%- assign gh_release = "" -%}
+{%- assign gh_release_date = "" -%}
+{%- assign gh_metrics = site.data.github_metrics.repos[include.project.repo] -%}
+{%- if gh_metrics.stars and gh_metrics.stars > 0 -%}
+  {%- assign gh_stars = gh_metrics.stars | append: "" -%}
+  {%- assign gh_stars_note = gh_metrics.checked_at | date: "%-d %b %Y" | prepend: "Snapshot from GitHub, checked " -%}
+{%- elsif include.project.baseline_stars -%}
+  {%- assign gh_stars = include.project.baseline_stars | append: "+" -%}
+  {%- assign gh_stars_note = "Baseline supplied by the maintainer; snapshot unavailable" -%}
+{%- endif -%}
+{%- if gh_metrics.forks and gh_metrics.forks > 0 -%}
+  {%- assign gh_forks = gh_metrics.forks | append: "" -%}
+{%- endif -%}
+{%- if gh_metrics.latest_release -%}
+  {%- assign gh_release = gh_metrics.latest_release -%}
+  {%- assign gh_release_date = gh_metrics.latest_release_date | date: "%-d %b %Y" -%}
+{%- endif -%}

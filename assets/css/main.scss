@@ -3,7 +3,8 @@
 ---
 
 // Main stylesheet
-// Imports all SCSS partials
+// Imports all SCSS partials. Theme tokens (light and dark) live in
+// base/variables.
 
 // Base styles
 @import 'base/variables';
@@ -17,6 +18,3 @@
 
 // Components
 @import 'components/index';
-
-// Themes
-@import 'themes/dark-mode';

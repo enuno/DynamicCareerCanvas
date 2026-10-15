@@ -4,13 +4,14 @@
 [![GitHub Pages](https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-blue.svg)](https://pages.github.com/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-Professional portfolio website for Elvis Nuno, showcasing 20 years of experience in systems architecture, DevOps, and blockchain/DePIN technologies.
+Professional portfolio of Elvis Nuno: infrastructure and systems engineer, open-source maintainer, and builder of governed AI-agent infrastructure.
 
 ## 🌟 Features
 
 - **Data-Driven**: All content in YAML files - easy to edit
-- **Modern Design**: Clean, professional, responsive
-- **Dark Mode**: Built-in light/dark theme support
+- **Featured open source**: UniFi MCP Server, Noesis Agent Stack, and Noesis Ansible, with GitHub metrics from a cached snapshot (see [docs/CONTENT.md](docs/CONTENT.md))
+- **Editorial design**: Charcoal/slate with a teal accent, system fonts, no external requests
+- **Dark Mode**: Follows the system theme, with a manual toggle
 - **AI-Friendly**: Comprehensive documentation for AI coding assistants
 - **Accessible**: WCAG AA compliant
 - **Fast**: Static site, optimized performance
@@ -21,8 +22,8 @@ Professional portfolio website for Elvis Nuno, showcasing 20 years of experience
 
 ### Prerequisites
 
-- Ruby 3.1+
-- Bundler
+- Ruby 3.1+ and Bundler, **or** Docker (`scripts/build-docker.sh`)
+- Python 3 and Node.js for the tests
 
 ### Local Development
 
@@ -49,10 +50,12 @@ Visit http://localhost:4000
 DynamicCareerCanvas/
 ├── _data/              # Content (YAML files)
 │   ├── experience.yml  # Work experience
-│   ├── projects.yml    # Projects & publications
-│   ├── skills.yml      # Technical skills
-│   ├── profile.yml     # Personal info
-│   └── site.yml        # Site configuration
+│   ├── featured_projects.yml  # Three featured open-source projects
+│   ├── github_metrics.json    # GitHub metrics snapshot (generated)
+│   ├── projects.yml    # Other projects & publications
+│   ├── skills.yml      # Expertise domains
+│   ├── profile.yml     # Hero, bio, principles, contact
+│   └── site.yml        # Navigation, SEO, footer
 ├── _includes/          # Reusable templates
 │   ├── components/     # UI components
 │   ├── head.html
@@ -65,17 +68,19 @@ DynamicCareerCanvas/
 ├── _sass/              # Styles (SCSS)
 │   ├── base/           # Variables, reset, utilities
 │   ├── components/     # Component styles
-│   ├── layout/         # Layout styles
-│   └── themes/         # Theme definitions
+│   └── layout/         # Layout styles
 ├── assets/             # Static files
 │   ├── css/
 │   ├── js/
 │   └── images/
 ├── scripts/            # Utility scripts
 │   ├── build-local.sh
+│   ├── build-docker.sh # Build in a Ruby 3.1 container
+│   ├── refresh_github_metrics.py
 │   ├── serve-local.sh
 │   ├── validate-yaml.sh
 │   └── new-experience.sh
+├── tests/              # Metrics, built-site, and navigation tests
 ├── .ai/                # AI assistant documentation
 │   ├── CONTEXT.md
 │   ├── CONVENTIONS.md
@@ -120,9 +125,16 @@ Or use the helper script:
 ./scripts/new-experience.sh
 ```
 
+### Featured Projects and GitHub Metrics
+
+Edit `_data/featured_projects.yml` (schema at the top of the file). Refresh
+the metrics snapshot with `python3 scripts/refresh_github_metrics.py`. See
+[docs/CONTENT.md](docs/CONTENT.md) for the editorial rules and fallback
+behavior.
+
 ### Adding Projects
 
-Edit `_data/projects.yml`:
+Edit `_data/projects.yml` (the "More projects, writing, and community work" list):
 
 ```yaml
 - name: "Project Name"
@@ -138,25 +150,19 @@ Edit `_data/projects.yml`:
 
 ### Updating Skills
 
-Edit `_data/skills.yml` - organized by category.
+Edit `_data/skills.yml`: a few domains, each with a summary and a tool list.
 
 ### Personal Info
 
-Edit `_data/profile.yml` for bio, contact info, social links.
+Edit `_data/profile.yml` for the hero, bio, principles, contact info, and social links.
 
 ## 🎨 Customization
 
 ### Colors
 
-Edit `_sass/base/_variables.scss`:
-
-```scss
-:root {
-  --color-primary: #2c3e50;
-  --color-accent: #3498db;
-  // ... more variables
-}
-```
+Edit the theme mixins in `_sass/base/_variables.scss` (`theme-dark` and
+`theme-light` share token names). See [DESIGNSYSTEM.md](DESIGNSYSTEM.md) for
+the tokens and measured contrast.
 
 ### Components
 
@@ -216,17 +222,18 @@ Automated via GitHub Actions:
 ## 🔍 Testing
 
 ```bash
-# Build test
+# Build (or: scripts/build-docker.sh)
 bundle exec jekyll build
 
-# Check for errors
-bundle exec jekyll build --verbose
+# Automated checks (built-site checks run against _site/)
+python3 -m unittest discover -s tests -p 'test_*.py'
+node --test tests/
 
 # Serve locally
 bundle exec jekyll serve --livereload
 ```
 
-Check:
+Also check manually:
 - ✅ Builds without errors
 - ✅ Looks good in browser
 - ✅ Mobile responsive (resize to ~375px)

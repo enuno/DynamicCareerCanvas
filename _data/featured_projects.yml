@@ -1,0 +1,196 @@
+# Featured Open-Source Projects
+# Editorial content only. GitHub metrics (stars, forks, releases) live in
+# _data/github_metrics.json, a generated snapshot. See docs/CONTENT.md.
+#
+# Schema (one entry per project, flagship first):
+#   slug          "kebab-case" id, unique; anchor is #project-<slug>
+#   name          display name
+#   subtitle      optional secondary name (for example, repository branding)
+#   repo          "owner/name"; key used to look up github_metrics.json
+#   role          your role on the project
+#   flagship      true for the lead project (one entry only)
+#   logo          optional { src, width, height } path under assets/
+#   status        { label, note } verified status, with the date it was checked
+#   summary       one sentence: what it is
+#   problem       what problem it solves
+#   approach      what was built
+#   highlights    list of verified, distinctive points
+#   safety        optional list of safety controls
+#   community     optional paragraph about outside participation
+#   flow          optional list of { step, detail, gate } for a conceptual
+#                 diagram; gate: true marks a review or approval checkpoint
+#   distinction   optional note on how claims are separated by layer
+#   categories    short technology labels
+#   evidence      list of { label, url } a visitor can inspect
+#   links         { primary: { label, url }, secondary: [ { label, url } ] }
+#   related       list of slugs
+#   baseline_stars  optional owner-supplied floor, shown only when the
+#                   metrics snapshot has no star count for this repo
+#   checked       date the editorial claims were checked against the repo
+
+- slug: "unifi-mcp-server"
+  name: "UniFi MCP Server"
+  repo: "enuno/unifi-mcp-server"
+  role: "Creator and maintainer"
+  flagship: true
+  logo:
+    src: "/assets/images/projects/unifi-mcp-server.png"
+    width: 80
+    height: 80
+  status:
+    label: "Active"
+    note: "Apache-2.0 license"
+  summary: "An open-source MCP server that gives AI agents one standard tool interface to UniFi networks, with safety controls designed for real infrastructure."
+  problem: "UniFi networks are managed through several APIs: the local Network controller, Protect, and UniFi's cloud services. An agent that helps operate them needs one typed tool interface. The operator needs assurance that the agent cannot change a production network by accident."
+  approach: "I wrote and maintain a Python MCP server that exposes UniFi Network, UniFi Protect, and the UniFi cloud APIs as MCP tools. It runs against one controller. An optional fleet mode puts many controllers behind one server."
+  highlights:
+    - "Clients, VLANs, WiFi, DHCP and DNS, devices and topology export, zone-based firewall, VPN, Protect cameras and events, and backups."
+    - "343 tools in local mode as of v0.6.1. Tool profiles load one group at a time to keep an agent's context small."
+    - "Agent skills (SKILL.md files) tell an AI agent which tools exist and how to use them safely."
+    - "Distributed as a PyPI package and multi-architecture container images, with Ansible and Helm deployment paths."
+  safety:
+    - "Every mutating tool requires confirm=True, and dry_run=True previews the change."
+    - "Read-only and dry-run server modes remove or neutralize mutations."
+    - "Role-based access over read, write, and destructive risk tiers."
+    - "Mutations go to a hash-chained audit log, with optional SIEM export."
+  community: "The project grows through outside participation: code contributions, bug reports, and feature requests. Contribution guidelines, issue templates, and a CI gate (lint, type checks, security scans, and an 80% test-coverage floor) keep that work reviewable."
+  categories:
+    - "Python"
+    - "Model Context Protocol"
+    - "Network automation"
+    - "Docker"
+    - "Helm"
+  evidence:
+    - label: "Source and README"
+      url: "https://github.com/enuno/unifi-mcp-server"
+    - label: "Tool reference (API.md)"
+      url: "https://github.com/enuno/unifi-mcp-server/blob/main/API.md"
+    - label: "Changelog"
+      url: "https://github.com/enuno/unifi-mcp-server/blob/main/CHANGELOG.md"
+    - label: "Security policy"
+      url: "https://github.com/enuno/unifi-mcp-server/blob/main/SECURITY.md"
+    - label: "PyPI package"
+      url: "https://pypi.org/project/unifi-mcp-server/"
+  links:
+    primary:
+      label: "View repository"
+      url: "https://github.com/enuno/unifi-mcp-server"
+    secondary:
+      - label: "Read the tool reference"
+        url: "https://github.com/enuno/unifi-mcp-server/blob/main/API.md"
+      - label: "Contribute"
+        url: "https://github.com/enuno/unifi-mcp-server/blob/main/CONTRIBUTING.md"
+      - label: "Report an issue"
+        url: "https://github.com/enuno/unifi-mcp-server/issues/new/choose"
+  related: []
+  baseline_stars: 280
+  checked: "2026-10-15"
+
+- slug: "noesis-agent-stack"
+  name: "Noesis Agent Stack"
+  subtitle: "Governed multi-agent orchestration on Hermes"
+  repo: "enuno/noesis-agent-stack"
+  role: "Creator"
+  flagship: false
+  logo:
+    src: "/assets/images/projects/noesislab.svg"
+    width: 48
+    height: 48
+  status:
+    label: "In development"
+    note: "Control plane verified at repository level. Production deployment is phase-gated and not yet activated (README, 12 Oct 2026)."
+  summary: "An orchestrator plans and routes work. Specialist agents act within narrow mandates. Independent reviewers check results, and irreversible actions wait for a person."
+  problem: "A loose collection of chat agents has no memory beyond the conversation, no limit on what each agent may do, and no point where a person approves risky work. That can be acceptable for drafting text. It is not acceptable for operating infrastructure."
+  approach: "The system is built on Hermes Agent profiles. A durable task-contract control plane, the Noesis Orchestrator, classifies each goal and its risk tier. It assigns the specialist with the narrowest mandate, enforces approval gates, and combines the results. Agents exchange durable files and ledger entries, not chat history."
+  flow:
+    - step: "Intake"
+      detail: "The orchestrator classifies the goal's domain and risk tier."
+    - step: "Task contract"
+      detail: "Proposed, approved, queued. Each change goes to an append-only ledger."
+    - step: "Specialist"
+      detail: "One agent with a narrow mandate and toolset does the work."
+    - step: "Independent review"
+      detail: "Reviewer-only agents audit the result. They never execute."
+      gate: true
+    - step: "Human approval"
+      detail: "Irreversible operations wait at a human approval gate."
+      gate: true
+    - step: "Synthesis"
+      detail: "The orchestrator records the outcome as a durable artifact."
+  highlights:
+    - "By construction, the orchestrator holds no terminal and no code-execution tools."
+    - "16 in-house specialist profiles and 18 advisory-only profiles, all reporting to the orchestrator."
+    - "A task state machine with an append-only ledger, lease fencing against stale workers, and a supervisor sweep that fails closed."
+    - "The control-plane suite runs 407 tests with no network and no credentials (README, 11 Oct 2026)."
+  distinction: "Definitions, implementation, and deployment are tracked as separate layers. Roster entries, agent definitions, installed profiles, and running services are counted separately, and the README does not report a passing test suite as production operation."
+  categories:
+    - "Python"
+    - "Multi-agent orchestration"
+    - "Hermes Agent"
+    - "Policy and approval gates"
+  evidence:
+    - label: "Source and status (README)"
+      url: "https://github.com/enuno/noesis-agent-stack"
+    - label: "Workflows and approval gates"
+      url: "https://github.com/enuno/noesis-agent-stack/blob/main/WORKFLOWS.md"
+    - label: "Task-contract schema"
+      url: "https://github.com/enuno/noesis-agent-stack/blob/main/contracts/orchestration/task-contract.schema.json"
+    - label: "Orchestrator control plane"
+      url: "https://github.com/enuno/noesis-agent-stack/blob/main/orchestration/orchestrator/README.md"
+  links:
+    primary:
+      label: "View repository"
+      url: "https://github.com/enuno/noesis-agent-stack"
+    secondary:
+      - label: "Read the workflows"
+        url: "https://github.com/enuno/noesis-agent-stack/blob/main/WORKFLOWS.md"
+  related:
+    - "noesis-ansible"
+  checked: "2026-10-15"
+
+- slug: "noesis-ansible"
+  name: "Noesis Ansible"
+  subtitle: "NoesisPraxis Ansible Stack"
+  repo: "enuno/noesis-ansible"
+  role: "Creator"
+  flagship: false
+  logo:
+    src: "/assets/images/projects/noesislab.svg"
+    width: 48
+    height: 48
+  status:
+    label: "In development"
+    note: "Roles and playbooks under active development. This portfolio does not claim a deployed environment."
+  summary: "The infrastructure-as-code companion to Noesis Agent Stack: Ansible roles and playbooks that provision, configure, and validate the services the agents run on."
+  problem: "A governed agent system can only be as trustworthy as its hosts, registries, and secrets. Services configured by hand drift, and drift is difficult to audit."
+  approach: "Noesis Ansible describes the stack as Ansible roles and playbooks that are written to be idempotent. They cover agent registries, an MCP tool gateway, a policy and identity layer, agent runtimes, memory services, observability, and a human-in-the-loop channel. Separate inventories cover local Docker services, macOS hosts reached over a Tailscale network, and production targets. Helm charts cover Kubernetes."
+  highlights:
+    - "One hermes_profiles role applies both Noesis agent-profile families from a single variable. Third-party profiles stay off until someone enables them."
+    - "Secrets stay in Ansible Vault–encrypted variable files. A Bitwarden role fetches and validates secrets and checks rotation."
+    - "Services bind to localhost and are reached over the tailnet, with default-deny policies and scoped MCP tool access."
+    - "Validation, backup, maintenance, and rollback playbooks, plus an optional Grafana, Prometheus, Loki, and Tempo observability role."
+  categories:
+    - "Ansible"
+    - "Helm"
+    - "Docker"
+    - "Tailscale"
+    - "macOS launchd"
+  evidence:
+    - label: "Source and README"
+      url: "https://github.com/enuno/noesis-ansible"
+    - label: "Roles"
+      url: "https://github.com/enuno/noesis-ansible/tree/main/roles"
+    - label: "Inventories"
+      url: "https://github.com/enuno/noesis-ansible/tree/main/inventory"
+    - label: "Helm charts"
+      url: "https://github.com/enuno/noesis-ansible/tree/main/charts"
+  links:
+    primary:
+      label: "View repository"
+      url: "https://github.com/enuno/noesis-ansible"
+    secondary:
+      - label: "Browse the roles"
+        url: "https://github.com/enuno/noesis-ansible/tree/main/roles"
+  related:
+    - "noesis-agent-stack"
+  checked: "2026-10-15"
