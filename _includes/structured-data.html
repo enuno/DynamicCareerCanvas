@@ -1,0 +1,31 @@
+<!-- JSON-LD for the home page: the person and the featured source projects.
+     Only facts present in _data are emitted. -->
+{%- assign profile = site.data.profile -%}
+{%- assign home = site.url | append: site.baseurl | append: "/" -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": {{ home | append: "#person" | jsonify }},
+      "name": {{ profile.name | jsonify }},
+      "url": {{ home | jsonify }},
+      "jobTitle": {{ site.tagline | jsonify }},
+      "knowsAbout": [{% for d in site.data.skills %}{{ d.category | jsonify }}{% unless forloop.last %}, {% endunless %}{% endfor %}],
+      "sameAs": [
+        "https://github.com/{{ profile.social.github }}",
+        "https://www.linkedin.com/in/{{ profile.social.linkedin }}",
+        "https://orcid.org/{{ profile.social.orcid }}"
+      ]
+    }{% for p in site.data.featured_projects %},
+    {
+      "@type": "SoftwareSourceCode",
+      "name": {{ p.name | jsonify }},
+      "description": {{ p.summary | jsonify }},
+      "codeRepository": "https://github.com/{{ p.repo }}",
+      "author": { "@id": {{ home | append: "#person" | jsonify }} }
+    }{% endfor %}
+  ]
+}
+</script>

@@ -1,6 +1,12 @@
 # Site Settings
-title: Elvis Nuno - Technology Solutions Architect
-description: Professional portfolio showcasing 20 years of experience in systems architecture, DevOps, and blockchain/DePIN technologies
+title: Elvis Nuno
+tagline: Infrastructure & Systems Engineer
+description: Elvis Nuno is an infrastructure and systems engineer and open-source maintainer. He builds governed AI-agent tooling on two decades of ISP, datacenter, Linux, and automation work.
+author: Elvis Nuno
+lang: en_US
+twitter:
+  username: NunoElvis
+  card: summary
 url: https://enuno.github.io
 baseurl: /DynamicCareerCanvas
 repository: enuno/DynamicCareerCanvas
@@ -37,6 +43,7 @@ exclude:
   - vendor/ruby/
   - lib/
   - scripts/
+  - tests/
   - .bundle/
   - .git/
   - .gitignore

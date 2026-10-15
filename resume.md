@@ -1,12 +1,14 @@
 ---
-layout: default
+layout: page
 title: Resume
+description: Résumé of Elvis Nuno, infrastructure and systems engineer. Network engineering, Linux and DevOps automation, and governed AI-agent tooling.
+hide_title: true
 permalink: /resume/
 ---
 
 # Elvis Nuno
 
-**WAN Network Architect | DevOps Engineer | Blockchain & DePIN Specialist**
+**WAN Network Architect \| DevOps Engineer \| Blockchain & DePIN Specialist**
 
 ## Contact Information
 
@@ -18,7 +20,7 @@ permalink: /resume/
 - **Portfolio:** [enuno.github.io/DynamicCareerCanvas](https://enuno.github.io/DynamicCareerCanvas)
 
 <div class="text-center mt-lg mb-lg">
-  <a href="{{ '/assets/files/resume.pdf' | relative_url }}" class="button button--primary" target="_blank">Download PDF Resume</a>
+  <a href="{{ '/assets/files/resume.pdf' | relative_url }}" class="button button--primary">Download PDF Resume</a>
 </div>
 
 ---
@@ -46,14 +48,14 @@ Dynamic technology solutions architect with **20+ years of experience** speciali
 ## Professional Experience
 
 ### ServerDomes | *WAN Network Architect & Technical Solutions Consultant*
-**March 2025 – Present | United States**
+**March 2025 – Present \| United States**
 
 - Architecting long-haul fiber WAN infrastructure connecting decentralized network of next-generation edge data centers
 - Designing fault-tolerant, low-latency tier-1 carrier-blended bandwidth solutions for cloud compute, AI workloads, telecommunications, and blockchain applications
 - Engineering scalable network infrastructure supporting diverse enterprise workloads and Web3 applications
 
 ### Centric IS | *Director of Network Operations*
-**January 2024 – August 2024 | Missoula, MT**
+**January 2024 – August 2024 \| Missoula, MT**
 
 - Led successful integration and merger of two distinct ISP networks with minimal downtime
 - Spearheaded vulnerability assessment and remediation of legacy infrastructure, implementing comprehensive migration strategies
@@ -61,7 +63,7 @@ Dynamic technology solutions architect with **20+ years of experience** speciali
 - Enhanced network reliability and performance through strategic infrastructure modernization
 
 ### Pacific NW Rural Broadband Alliance | *President, Co-Founder, Head of Operations*
-**November 2019 – June 2024 | Missoula, MT**
+**November 2019 – June 2024 \| Missoula, MT**
 
 - Founded and led non-profit organization bridging the digital divide in rural western Montana communities
 - Coordinated grant-funded broadband deployment projects for community-owned ISPs serving underserved populations
@@ -69,28 +71,28 @@ Dynamic technology solutions architect with **20+ years of experience** speciali
 - Provided consultation, engineering guidance, and operational support for community broadband initiatives
 
 ### REW Consulting Services | *Solutions Architect & Technical Consultant*
-**June 2018 – February 2019 | Contract**
+**June 2018 – February 2019 \| Contract**
 
 - Implemented DevOps best practices and CI/CD automation for national and international cellular telecommunications providers
 - Developed Ansible playbooks for infrastructure automation and configuration management
 - Engineered Jenkins CI/CD pipelines for large-scale telecom network deployments
 
 ### SolluCIO Partners | *Linux System Engineer*
-**July 2019 – November 2019 | Missoula, MT**
+**July 2019 – November 2019 \| Missoula, MT**
 
 - Architected and deployed high-availability cloud-based eCommerce platform for Hawaii grocery store chain
 - Implemented security hardening and performance optimization best practices
 - Managed cloud infrastructure and application deployment workflows
 
 ### goMoxie | *Lead DevOps Engineer - Cloud Services*
-**June 2016 – December 2016 | Bellevue, WA**
+**June 2016 – December 2016 \| Bellevue, WA**
 
 - Led DevOps engineering team in establishing organizational best practices and unified DevOps culture
 - Architected automated infrastructure deployment on VMware private cloud and AWS for customer service platform
 - Transitioned siloed operational teams to collaborative DevOps model, improving deployment velocity
 
 ### McGraw-Hill Education | *Senior DevOps Engineer*
-**June 2015 – March 2016 | Seattle, WA**
+**June 2015 – March 2016 \| Seattle, WA**
 
 - Managed AWS pre-production environments and production deployments for online educational courseware platform
 - Administered EC2 Auto Scaling, RDS databases, DynamoDB, S3, CodeDeploy, and IAM security infrastructure
@@ -98,14 +100,14 @@ Dynamic technology solutions architect with **20+ years of experience** speciali
 - Coordinated production releases through Change Advisory Board (CAB) processes
 
 ### CDK Global | *Senior Linux Systems Automation Engineer*
-**October 2014 – June 2015 | Seattle, WA**
+**October 2014 – June 2015 \| Seattle, WA**
 
 - Developed Puppet modules for automated provisioning and scaling of multi-datacenter virtualized cloud infrastructure
 - Architected distributed monitoring platform using Icinga with automated client registration for rapid deployment
 - Supported production deployments and troubleshooting of multi-tenant virtual server environments
 
 ### Salesforce | *Senior Linux Systems Engineer*
-**February 2014 – October 2014 | San Francisco, CA**
+**February 2014 – October 2014 \| San Francisco, CA**
 
 - Scaled and managed 500+ server environment running PHP, MySQL, Solr, and Cassandra on IBM Softlayer platform
 - Implemented Chef-based configuration management framework with custom cookbooks
@@ -113,7 +115,7 @@ Dynamic technology solutions architect with **20+ years of experience** speciali
 - Managed MySQL master/master replication shard clusters and automated Bamboo build pipelines
 
 ### Clearwire | *Multiple Leadership Roles*
-**December 2006 – October 2013 | Kirkland, WA**
+**December 2006 – October 2013 \| Kirkland, WA**
 
 #### DevOps Release Manager *(October 2011 – October 2013)*
 - Prepared and executed deployment plans for high-traffic eCommerce websites and enterprise applications
@@ -131,14 +133,14 @@ Dynamic technology solutions architect with **20+ years of experience** speciali
 - Coordinated field technician deployment during multi-site outages and circuit troubleshooting
 
 ### Logistic Systems, Inc. | *Record Management Systems Engineer*
-**June 2005 – October 2006 | Missoula, MT**
+**June 2005 – October 2006 \| Missoula, MT**
 
 - Provided remote administration and support for custom record management software for police and fire departments
 - Managed IBM AIX mainframes and Windows Server 2003 systems running DB2 databases
 - Coordinated remote network-wide software updates, bug fixes, and federal NCIC compliance updates
 
 ### University of Montana | *OS X Systems Administrator*
-**June 2004 – August 2005 | Missoula, MT**
+**June 2004 – August 2005 \| Missoula, MT**
 
 - Managed 50+ client computer lab and 10-server macOS environment for university newspaper staff
 - Provided technical support for 50 journalism students and maintained network printing infrastructure
@@ -191,7 +193,7 @@ Comprehensive Ansible playbook collection for deploying production-grade Akash C
 ## Education
 
 **The University of Montana**
-**2004 – 2005 | Missoula, MT**
+**2004 – 2005 \| Missoula, MT**
 
 ---
 
@@ -212,6 +214,6 @@ Cryptocurrency & DeFi • Blockchain Infrastructure • Decentralized Physical I
 ---
 
 <div class="text-center mt-xl mb-xl">
-  <a href="{{ '/assets/files/resume.pdf' | relative_url }}" class="button button--primary" target="_blank">Download PDF Resume</a>
+  <a href="{{ '/assets/files/resume.pdf' | relative_url }}" class="button button--primary">Download PDF Resume</a>
   <a href="{{ '/' | relative_url }}" class="button button--secondary">Back to Home</a>
 </div>

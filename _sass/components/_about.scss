@@ -1,0 +1,56 @@
+// About Component
+// Biography beside a list of engineering principles.
+
+.about {
+  display: grid;
+  gap: var(--spacing-2xl);
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: 5fr 7fr;
+    gap: var(--spacing-3xl);
+  }
+
+  &__bio p {
+    max-width: var(--measure);
+    font-size: var(--font-size-lg);
+    color: var(--color-text-secondary);
+
+    &:first-child {
+      color: var(--color-text-primary);
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: var(--spacing-md);
+    font-size: var(--font-size-xl);
+  }
+}
+
+.principles {
+  display: grid;
+  margin: 0;
+  border-top: 1px solid var(--color-border);
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: var(--spacing-xl);
+  }
+}
+
+.principle {
+  padding: var(--spacing-md) 0;
+  border-bottom: 1px solid var(--color-border);
+
+  dt {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+
+  dd {
+    margin: 0.35rem 0 0;
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+  }
+}

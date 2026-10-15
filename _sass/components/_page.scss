@@ -1,39 +1,91 @@
-// Page layout component
+// Page Component
+// Long-form pages such as the résumé (Markdown content).
 
 .page {
-  padding: var(--spacing-3xl) 0;
+  padding: var(--spacing-3xl) 0 var(--spacing-section);
 
   &__header {
-    text-align: center;
     margin-bottom: var(--spacing-2xl);
   }
 
   &__title {
-    font-size: var(--font-size-4xl);
-    margin-bottom: var(--spacing-sm);
-
-    @media (max-width: $breakpoint-md) {
-      font-size: var(--font-size-3xl);
-    }
+    font-size: var(--font-size-3xl);
   }
 
   &__subtitle {
-    font-size: var(--font-size-xl);
+    margin-top: var(--spacing-sm);
+    font-size: var(--font-size-lg);
     color: var(--color-text-secondary);
   }
 
   &__content {
-    max-width: 800px;
-    margin: 0 auto;
+    max-width: 52rem;
+
+    h1 {
+      font-size: var(--font-size-display);
+      letter-spacing: -0.035em;
+    }
+
+    h1 + p {
+      margin-top: var(--spacing-md);
+      font-family: var(--font-mono);
+      font-size: var(--font-size-sm);
+      color: var(--color-accent);
+    }
 
     h2 {
-      margin-top: var(--spacing-2xl);
-      margin-bottom: var(--spacing-md);
+      margin: var(--spacing-2xl) 0 var(--spacing-md);
+      padding-top: var(--spacing-md);
+      border-top: 1px solid var(--color-border-strong);
+      font-size: var(--font-size-2xl);
     }
 
     h3 {
-      margin-top: var(--spacing-xl);
-      margin-bottom: var(--spacing-md);
+      margin: var(--spacing-xl) 0 var(--spacing-xs);
+      font-size: var(--font-size-lg);
+
+      em {
+        font-style: normal;
+        font-weight: 400;
+        color: var(--color-text-secondary);
+      }
+    }
+
+    h3 + p {
+      font-family: var(--font-mono);
+      font-size: var(--font-size-xs);
+      color: var(--color-text-muted);
+
+      strong {
+        font-weight: 400;
+      }
+    }
+
+    p,
+    li {
+      color: var(--color-text-secondary);
+    }
+
+    strong {
+      color: var(--color-text-primary);
+    }
+
+    ul {
+      padding-left: 1.25rem;
+    }
+
+    li {
+      margin-bottom: var(--spacing-xs);
+    }
+
+    // Separators in the Markdown source; section rules already divide content
+    hr {
+      display: none;
+    }
+
+    // The résumé page wraps its PDF button in a centered div
+    .text-center {
+      margin: var(--spacing-lg) 0;
     }
   }
 }

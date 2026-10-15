@@ -1,0 +1,15 @@
+<!-- Component: Project Evidence
+     Links a visitor can inspect, plus technology categories.
+     Usage: include components/project-evidence.html project=p level=4 -->
+{% assign p = include.project %}
+{% assign hl = include.level | default: 4 %}
+<h{{ hl }} class="label">Inspect the evidence</h{{ hl }}>
+<ul class="evidence">
+  {% for item in p.evidence %}
+  <li><a href="{{ item.url }}" rel="noopener">{{ item.label }}<span class="sr-only"> ({{ p.name }})</span> <span aria-hidden="true">↗</span></a></li>
+  {% endfor %}
+</ul>
+<h{{ hl }} class="label">Stack</h{{ hl }}>
+<ul class="tags">
+  {% for category in p.categories %}<li>{{ category }}</li>{% endfor %}
+</ul>

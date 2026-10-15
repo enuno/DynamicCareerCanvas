@@ -1,145 +1,176 @@
 // Navigation Component
+// Desktop: inline list. Below $breakpoint-lg (with JS): a disclosure panel
+// toggled by .nav__toggle. Without JS the list stays visible and wraps.
 
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--spacing-lg);
-  padding: var(--spacing-md) 0;
+  gap: var(--spacing-md);
+  min-height: var(--header-height);
 
   &__brand {
-    flex-shrink: 0;
-  }
-
-  &__logo {
-    font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-bold);
-    color: var(--color-text);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-right: auto;
+    color: var(--color-text-primary);
+    font-weight: 650;
     text-decoration: none;
-    transition: color var(--transition-normal);
 
     &:hover {
-      color: var(--color-primary);
+      color: var(--color-text-primary);
     }
   }
 
-  &__menu {
+  &__mark {
+    display: inline-grid;
+    place-items: center;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--color-accent);
+    border-radius: var(--radius-sm);
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+  }
+
+  &__list {
     display: flex;
-    list-style: none;
-    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+    gap: 0.25rem;
     margin: 0;
     padding: 0;
-    align-items: center;
-
-    @media (max-width: $breakpoint-md) {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      flex-direction: column;
-      width: 280px;
-      height: 100vh;
-      background: var(--color-surface);
-      padding: var(--spacing-3xl) var(--spacing-xl);
-      box-shadow: var(--shadow-xl);
-      transition: right var(--transition-normal);
-      z-index: var(--z-modal);
-      border-left: 1px solid var(--color-border);
-
-      &.is-open {
-        right: 0;
-      }
-    }
-  }
-
-  &__item {
-    margin: 0;
+    list-style: none;
   }
 
   &__link {
-    color: var(--color-text);
-    font-weight: var(--font-weight-medium);
-    padding: var(--spacing-sm) 0;
-    transition: color var(--transition-normal);
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 0 0.7rem;
+    border-radius: var(--radius-sm);
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
     text-decoration: none;
 
     &:hover {
-      color: var(--color-primary);
+      color: var(--color-text-primary);
+      background: var(--color-surface-2);
     }
+  }
 
-    &--active {
-      color: var(--color-primary);
-    }
-
-    @media (max-width: $breakpoint-md) {
-      font-size: var(--font-size-lg);
-      padding: var(--spacing-md) 0;
-    }
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
   }
 
   &__toggle {
     display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 28px;
-    height: 21px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    z-index: calc(var(--z-modal) + 1);
+  }
 
-    span {
-      display: block;
-      height: 3px;
-      width: 100%;
-      background: var(--color-text);
-      border-radius: 3px;
-      transition: all var(--transition-normal);
+  &__toggle-bars,
+  &__toggle-bars::before,
+  &__toggle-bars::after {
+    display: block;
+    width: 18px;
+    height: 2px;
+    border-radius: 1px;
+    background: currentColor;
+    transition: transform var(--transition), opacity var(--transition);
+  }
+
+  &__toggle-bars {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
     }
+
+    &::before { top: -6px; }
+    &::after { top: 6px; }
+  }
+
+  &__toggle[aria-expanded="true"] &__toggle-bars {
+    background: transparent;
+
+    &::before { transform: translateY(6px) rotate(45deg); }
+    &::after { transform: translateY(-6px) rotate(-45deg); }
+  }
+}
+
+// Collapsed menu on narrow screens, only when JS can open it
+@media (max-width: $breakpoint-lg - 1px) {
+  .js .nav {
+    flex-wrap: nowrap;
+  }
+
+  .js .nav__toggle {
+    display: inline-flex;
+  }
+
+  .js .nav__menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-background);
+    box-shadow: var(--shadow-panel);
 
     &.is-open {
-      span:nth-child(1) {
-        transform: rotate(45deg) translate(6px, 6px);
-      }
-
-      span:nth-child(2) {
-        opacity: 0;
-      }
-
-      span:nth-child(3) {
-        transform: rotate(-45deg) translate(6px, -6px);
-      }
+      display: block;
     }
+  }
 
-    @media (max-width: $breakpoint-md) {
-      display: flex;
-    }
+  .js .nav__list {
+    flex-direction: column;
+    gap: 0;
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: var(--spacing-sm) var(--gutter) var(--spacing-md);
+  }
+
+  .js .nav__link {
+    width: 100%;
+    font-size: var(--font-size-base);
+    border-bottom: 1px solid var(--color-border);
+    border-radius: 0;
+    padding: 0 0.25rem;
+  }
+
+  // No JS: keep links visible on their own row
+  html:not(.js) .nav {
+    flex-wrap: wrap;
+    padding-bottom: var(--spacing-sm);
+  }
+
+  html:not(.js) .nav__menu {
+    order: 3;
+    width: 100%;
   }
 }
 
-.theme-toggle {
-  background: transparent;
-  border: 2px solid var(--color-border);
-  border-radius: var(--radius-full);
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: all var(--transition-normal);
-  font-size: var(--font-size-lg);
-
-  &:hover {
-    border-color: var(--color-primary);
-    background: var(--color-surface-hover);
-  }
-
-  &__icon {
-    transition: transform var(--transition-normal);
-  }
-
-  &:hover &__icon {
-    transform: rotate(20deg);
-  }
+// Theme toggle: show the icon for the theme you would switch to
+.theme-icon {
+  display: inline-flex;
 }
+
+.theme-icon--moon {
+  display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .theme-icon--sun { display: none; }
+  :root:not([data-theme="dark"]) .theme-icon--moon { display: inline-flex; }
+}
+
+:root[data-theme="light"] .theme-icon--sun { display: none; }
+:root[data-theme="light"] .theme-icon--moon { display: inline-flex; }
+:root[data-theme="dark"] .theme-icon--sun { display: inline-flex; }
+:root[data-theme="dark"] .theme-icon--moon { display: none; }

@@ -1,0 +1,10 @@
+<!-- Component: Project Actions
+     Primary and secondary links for a featured project.
+     Link text carries the project name for screen readers. -->
+{% assign p = include.project %}
+<div class="actions">
+  <a class="button button--primary" href="{{ p.links.primary.url }}" rel="noopener">{{ p.links.primary.label }}<span class="sr-only">: {{ p.name }}</span> <span aria-hidden="true">↗</span></a>
+  {% for link in p.links.secondary %}
+  <a class="button" href="{{ link.url }}" rel="noopener">{{ link.label }}<span class="sr-only">: {{ p.name }}</span> <span aria-hidden="true">↗</span></a>
+  {% endfor %}
+</div>

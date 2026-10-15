@@ -1,0 +1,64 @@
+// Expertise Domain Component
+// A ruled two-by-two grid, like a specification sheet.
+
+.domains {
+  display: grid;
+  border-top: 1px solid var(--color-border);
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.domain {
+  padding: var(--spacing-xl) 0;
+  border-bottom: 1px solid var(--color-border);
+
+  @media (min-width: $breakpoint-md) {
+    padding: var(--spacing-xl);
+
+    &:nth-child(odd) {
+      padding-left: 0;
+      border-right: 1px solid var(--color-border);
+    }
+
+    &:nth-child(even) {
+      padding-right: 0;
+    }
+  }
+
+  &__label {
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-accent);
+  }
+
+  &__title {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  &__summary {
+    color: var(--color-text-secondary);
+  }
+
+  &__tools {
+    display: flex;
+    flex-wrap: wrap;
+    margin: var(--spacing-md) 0 0;
+    padding: 0;
+    list-style: none;
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+
+    li {
+      margin: 0 0 0.35rem;
+
+      &:not(:last-child)::after {
+        content: "/";
+        margin: 0 0.6rem;
+        color: var(--color-border-strong);
+      }
+    }
+  }
+}

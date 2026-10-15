@@ -8,17 +8,14 @@
 
   {% include header.html %}
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     {{ content }}
   </main>
 
   {% include footer.html %}
 
-  <!-- Theme toggle script -->
-  <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}"></script>
-
-  <!-- Navigation toggle script -->
-  <script src="{{ '/assets/js/nav-toggle.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/theme-toggle.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/nav-toggle.js' | relative_url }}" defer></script>
 </body>
 
 </html>

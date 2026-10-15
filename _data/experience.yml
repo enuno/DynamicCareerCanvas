@@ -7,6 +7,7 @@
   start_date: "2025-10"
   end_date: null
   current: true
+  summary: "Founded the company to develop modular, direct-to-chip liquid-cooled Bitcoin mining infrastructure powered by green energy."
   description: |
     Founded and leading the creation and commercialization of TerraHash Stack — a next-generation bitcoin mining platform redefining efficiency, scalability, and sustainability in crypto infrastructure through AI-driven automation and renewable-powered operations.
   highlights:
@@ -25,11 +26,13 @@
     - "Blockchain"
 
 - company: "ServerDomes"
-  title: "WAN Network Architect & Technical Solutions Consultant"
+  title: "President, Network Engineering & Operations"
+  previous_title: "WAN Network Architect & Technical Solutions Consultant"
   location: "United States"
   start_date: "2025-03"
   end_date: null
   current: true
+  summary: "Responsible for fiber WAN design and datacenter networking for a decentralized network of edge datacenters."
   description: |
     Architecting long-haul fiber WAN infrastructure connecting decentralized network of next-generation edge data centers with fault-tolerant, low-latency tier-1 carrier-blended bandwidth solutions.
   highlights:

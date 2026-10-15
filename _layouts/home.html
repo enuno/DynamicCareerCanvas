@@ -1,131 +1,222 @@
 ---
 layout: default
 ---
+{%- comment -%}
+  Home page. Content comes from _data/: profile.yml, featured_projects.yml,
+  github_metrics.json, projects.yml, skills.yml, experience.yml.
+{%- endcomment -%}
+{% assign profile = site.data.profile %}
+{% assign flagship = site.data.featured_projects | where: "flagship", true | first %}
+{% assign related = site.data.featured_projects | where: "flagship", false %}
 
-<!-- Hero Section with Banner -->
-<section class="section section--hero">
-  {% if site.data.profile.about.banner %}
-  <div class="hero__banner">
-    <img src="{{ site.data.profile.about.banner | relative_url }}" alt="Banner">
-    <div class="hero__overlay"></div>
-  </div>
-  {% endif %}
-  <div class="container">
-    <div class="hero">
-      {% if site.data.profile.about.image %}
-      <div class="hero__image-wrapper">
-        <img src="{{ site.data.profile.about.image | relative_url }}" alt="{{ site.data.profile.name }}" class="hero__profile-image">
+<!-- Hero -->
+<section class="hero" aria-labelledby="hero-title">
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <p class="hero__eyebrow meta">{{ profile.hero.eyebrow }}</p>
+      <h1 id="hero-title" class="hero__name">{{ profile.name }}</h1>
+      <p class="hero__headline">{{ profile.hero.headline }}</p>
+      <p class="hero__intro">{{ profile.hero.intro }}</p>
+
+      <div class="hero__actions">
+        <a class="button button--primary" href="#work">Explore my work</a>
+        <a class="button" href="https://github.com/{{ profile.social.github }}" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+        <a class="button button--ghost" href="#contact">Contact</a>
       </div>
+
+      {% include github-metrics.html project=flagship %}
+      {% if gh_stars != "" %}
+      <p class="proof">
+        <a class="proof__link" href="{{ flagship.links.primary.url }}" rel="noopener">
+          {% include icons/star.svg %}
+          <span><strong>{{ gh_stars }}</strong> GitHub stars</span>
+          <span class="proof__project">{{ flagship.name }}</span>
+        </a>
+        <span class="proof__note">{{ gh_stars_note }}</span>
+      </p>
       {% endif %}
-      <div class="hero__content">
-        <h1 class="hero__title">{{ site.data.profile.name }}</h1>
-        <p class="hero__subtitle">{{ site.data.profile.title }}</p>
-
-        {% if site.data.profile.location %}
-        <p class="hero__location">📍 {{ site.data.profile.location }}</p>
-        {% endif %}
-
-        {% if site.data.profile.about.bio %}
-        <div class="hero__bio">
-          {{ site.data.profile.about.bio | truncatewords: 50 }}
-        </div>
-        {% endif %}
-
-        <div class="hero__actions">
-          <a href="#experience" class="button button--primary">View Experience</a>
-          <a href="#projects" class="button button--secondary">See Projects</a>
-          <a href="{{ '/assets/files/resume.pdf' | relative_url }}" class="button button--outline" target="_blank">📄 Download Resume</a>
-        </div>
-      </div>
     </div>
+
+    {% include components/stack-diagram.html %}
   </div>
 </section>
 
-<!-- About Section -->
-<section id="about" class="section">
+<!-- Work -->
+<section id="work" class="section" aria-labelledby="work-title">
   <div class="container">
-    <div class="section__header">
-      <h2 class="section__title">{{ site.data.profile.about.title }}</h2>
-    </div>
-    <div class="section__content">
-      {{ site.data.profile.about.bio | markdownify }}
-    </div>
-  </div>
-</section>
-
-<!-- Experience Section -->
-<section id="experience" class="section">
-  <div class="container">
-    <div class="section__header">
-      <h2 class="section__title">Work Experience</h2>
-      <p class="section__subtitle">20 years of technical leadership and hands-on engineering</p>
-    </div>
-    <div class="section__content">
-      <div class="grid grid--2-col">
-        {% for exp in site.data.experience limit:6 %}
-          {% include components/experience-card.html experience=exp %}
-        {% endfor %}
+    <header class="section__header">
+      <p class="section__index meta">01 / Work</p>
+      <div>
+        <h2 id="work-title" class="section__title">Open-source work</h2>
+        <p class="section__lede">Three projects with one idea in common: AI agents should work on real infrastructure only through typed interfaces, explicit limits, and evidence that a person can inspect.</p>
       </div>
-      <div class="text-center mt-xl">
-        <a href="{{ '/resume' | relative_url }}" class="button">View Full Resume</a>
-      </div>
-    </div>
-  </div>
-</section>
+    </header>
 
-<!-- Projects Section -->
-<section id="projects" class="section">
-  <div class="container">
-    <div class="section__header">
-      <h2 class="section__title">Projects & Publications</h2>
-      <p class="section__subtitle">Featured work and contributions</p>
-    </div>
-    <div class="section__content">
-      <div class="grid">
-        {% for project in site.data.projects %}
-          {% if project.featured %}
-            {% include components/project-card.html project=project %}
-          {% endif %}
+    {% include components/project-flagship.html project=flagship %}
+
+    <div class="system">
+      <div class="system__intro">
+        <p class="meta">Related projects</p>
+        <h3 id="system-title" class="system__title">Noesis: governed agents and the infrastructure under them</h3>
+        <p class="system__relation">Noesis Agent Stack defines and coordinates agent behavior. Noesis Ansible provisions and configures the infrastructure that supports it.</p>
+      </div>
+      <div class="system__grid">
+        {% for project in related %}
+          {% include components/project-panel.html project=project level=4 %}
         {% endfor %}
       </div>
     </div>
+
+    {% include components/work-index.html %}
   </div>
 </section>
 
-<!-- Skills Section -->
-<section id="skills" class="section">
+<!-- Expertise -->
+<section id="expertise" class="section" aria-labelledby="expertise-title">
   <div class="container">
-    <div class="section__header">
-      <h2 class="section__title">Technical Skills</h2>
-    </div>
-    <div class="section__content">
-      {% for skill_group in site.data.skills %}
-        {% include components/skill-group.html group=skill_group %}
+    <header class="section__header">
+      <p class="section__index meta">02 / Expertise</p>
+      <div>
+        <h2 id="expertise-title" class="section__title">Systems expertise</h2>
+        <p class="section__lede">Four domains that support each other. The network carries the workload, automation keeps it reproducible, and agents operate it within limits.</p>
+      </div>
+    </header>
+
+    <div class="domains">
+      {% for domain in site.data.skills %}
+      <article class="domain">
+        <p class="domain__label meta">{{ domain.label }}</p>
+        <h3 class="domain__title">{{ domain.category }}</h3>
+        <p class="domain__summary">{{ domain.summary }}</p>
+        <ul class="domain__tools">
+          {% for tool in domain.tools %}<li>{{ tool }}</li>{% endfor %}
+        </ul>
+      </article>
       {% endfor %}
     </div>
   </div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="section">
+<!-- Experience -->
+{% assign recent_count = 6 %}
+{% assign earlier_first = site.data.experience[recent_count] %}
+{% assign earlier_total = site.data.experience.size | minus: recent_count %}
+<section id="experience" class="section" aria-labelledby="experience-title">
   <div class="container">
-    <div class="section__header">
-      <h2 class="section__title">Get In Touch</h2>
-    </div>
-    <div class="section__content text-center">
-      <p>Interested in working together? <a href="https://linkedin.com/in/{{ site.data.profile.social.linkedin }}" class="link-highlight" target="_blank" rel="noopener noreferrer">Let's connect!</a></p>
-      <div class="mt-lg">
-        {% if site.data.profile.email %}
-        <a href="mailto:{{ site.data.profile.email }}" class="button">📧 Email Me</a>
-        {% endif %}
-        <a href="https://cal.com/enuno" class="button button--secondary" target="_blank" rel="noopener noreferrer">📅 Schedule a Meeting</a>
-        {% if site.data.profile.social.linkedin %}
-        <a href="https://linkedin.com/in/{{ site.data.profile.social.linkedin }}" class="button button--secondary" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
-        {% endif %}
-        {% if site.data.profile.social.github %}
-        <a href="https://github.com/{{ site.data.profile.social.github }}" class="button button--outline" target="_blank" rel="noopener noreferrer">🐙 GitHub</a>
-        {% endif %}
+    <header class="section__header">
+      <p class="section__index meta">03 / Experience</p>
+      <div>
+        <h2 id="experience-title" class="section__title">Experience</h2>
+        <p class="section__lede">From a wireless network operations center to fiber WAN design and agent tooling. The résumé has the full detail.</p>
+      </div>
+    </header>
+
+    <ol class="timeline">
+      {% for job in site.data.experience limit: recent_count %}
+        {% include components/timeline-item.html job=job %}
+      {% endfor %}
+    </ol>
+
+    {% if earlier_total > 0 %}
+    <details class="timeline-more">
+      <summary>
+        Earlier roles, {{ site.data.experience.last.start_date | slice: 0, 4 }}–{{ earlier_first.end_date | slice: 0, 4 }}
+        <span class="meta">{{ earlier_total }} roles</span>
+      </summary>
+      <ol class="timeline timeline--compact">
+        {% for job in site.data.experience offset: recent_count %}
+          {% include components/timeline-item.html job=job compact=true %}
+        {% endfor %}
+      </ol>
+    </details>
+    {% endif %}
+
+    <p class="timeline__cta">
+      <a class="button" href="{{ '/resume/' | relative_url }}">Read the full résumé</a>
+      <a class="button button--ghost" href="{{ '/assets/files/resume.pdf' | relative_url }}">Download PDF <span class="sr-only">résumé</span></a>
+    </p>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section" aria-labelledby="about-title">
+  <div class="container">
+    <header class="section__header">
+      <p class="section__index meta">04 / About</p>
+      <div>
+        <h2 id="about-title" class="section__title">About</h2>
+      </div>
+    </header>
+
+    <div class="about">
+      <div class="about__bio">
+        {{ profile.about.bio | markdownify }}
+      </div>
+      <div class="about__principles">
+        <h3 class="about__subtitle">Engineering principles</h3>
+        <dl class="principles">
+          {% for principle in profile.principles %}
+          <div class="principle">
+            <dt>{{ principle.name }}</dt>
+            <dd>{{ principle.text }}</dd>
+          </div>
+          {% endfor %}
+        </dl>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section section--last" aria-labelledby="contact-title">
+  <div class="container">
+    <header class="section__header">
+      <p class="section__index meta">05 / Contact</p>
+      <div>
+        <h2 id="contact-title" class="section__title">Contact</h2>
+        <p class="section__lede">For collaboration, architecture questions, or the projects above. For a bug or a feature request, please open an issue in that project's repository.</p>
+      </div>
+    </header>
+
+    <ul class="contact">
+      {% if profile.email %}
+      <li class="contact__row">
+        <span class="contact__label meta">Email</span>
+        <a class="contact__value" href="mailto:{{ profile.email }}">{{ profile.email }}</a>
+      </li>
+      {% endif %}
+      {% if profile.social.calendar %}
+      <li class="contact__row">
+        <span class="contact__label meta">Meeting</span>
+        <a class="contact__value" href="{{ profile.social.calendar }}" rel="noopener">Schedule a call on cal.com <span aria-hidden="true">↗</span></a>
+      </li>
+      {% endif %}
+      {% if profile.social.linkedin %}
+      <li class="contact__row">
+        <span class="contact__label meta">LinkedIn</span>
+        <a class="contact__value" href="https://www.linkedin.com/in/{{ profile.social.linkedin }}" rel="noopener">linkedin.com/in/{{ profile.social.linkedin }} <span aria-hidden="true">↗</span></a>
+      </li>
+      {% endif %}
+      {% if profile.social.github %}
+      <li class="contact__row">
+        <span class="contact__label meta">GitHub</span>
+        <a class="contact__value" href="https://github.com/{{ profile.social.github }}" rel="noopener">github.com/{{ profile.social.github }} <span aria-hidden="true">↗</span></a>
+      </li>
+      {% endif %}
+      {% if profile.social.orcid %}
+      <li class="contact__row">
+        <span class="contact__label meta">ORCID</span>
+        <a class="contact__value" href="https://orcid.org/{{ profile.social.orcid }}" rel="noopener">{{ profile.social.orcid }} <span aria-hidden="true">↗</span></a>
+      </li>
+      {% endif %}
+      <li class="contact__row">
+        <span class="contact__label meta">Résumé</span>
+        <span class="contact__value">
+          <a href="{{ '/resume/' | relative_url }}">Web version</a>
+          <span aria-hidden="true">·</span>
+          <a href="{{ '/assets/files/resume.pdf' | relative_url }}">PDF</a>
+        </span>
+      </li>
+    </ul>
   </div>
 </section>

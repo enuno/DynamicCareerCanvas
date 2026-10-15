@@ -1,0 +1,96 @@
+// Stack Diagram Component
+// Three stacked layers joined by a vertical rail with nodes.
+
+.stack {
+  margin: 0;
+  padding: var(--spacing-lg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-panel);
+
+  &__caption {
+    margin-bottom: var(--spacing-md);
+  }
+
+  &__layers {
+    position: relative;
+    margin: 0;
+    padding: 0 0 0 1.75rem;
+    list-style: none;
+
+    // Vertical rail
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0.9rem;
+      bottom: 0.9rem;
+      left: 0.45rem;
+      border-left: 1px dashed var(--color-border-strong);
+    }
+  }
+
+  &__layer {
+    position: relative;
+    display: grid;
+    gap: 0.15rem;
+    padding: var(--spacing-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-background);
+
+    & + & {
+      margin-top: var(--spacing-md);
+    }
+
+    // Node on the rail
+    &::before {
+      content: "";
+      position: absolute;
+      top: 1.05rem;
+      left: calc(-1.75rem + 0.1rem);
+      width: 0.7rem;
+      height: 0.7rem;
+      border: 2px solid var(--color-accent);
+      border-radius: 50%;
+      background: var(--color-surface);
+    }
+
+    &:first-child::before {
+      background: var(--color-accent);
+    }
+  }
+
+  &__tag {
+    color: var(--color-accent);
+  }
+
+  &__name {
+    font-weight: 650;
+  }
+
+  &__items {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+  }
+
+  &__projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.75rem;
+    margin-top: 0.35rem;
+    font-size: var(--font-size-sm);
+
+    a::before {
+      content: "\2192\00a0";
+      color: var(--color-text-muted);
+    }
+  }
+
+  &__note {
+    margin: var(--spacing-md) 0 0;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+  }
+}
